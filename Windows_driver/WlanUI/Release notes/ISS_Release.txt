@@ -1,0 +1,2798 @@
+##########Realtek WLAN Install Package##################
+
+Language Support ¡G
+
+1->English    2->Basque   3->Bulgarian    4->Catalan   5->Simple Chinese  6->Traditional Chinese   7->Croatian   8->Czech   9->Danish   10->Dutch
+11->Finish   12->French(Canada)   13->French(France)   14->German  15->Greek   16->Hungarian   17->Indonesian   18->Italian   19->Japanese
+20->Korean  21->Norwegian   22->Polish   23->Portuguese(Brazil)  24->Portuguese(Portugal)  25->Romanian  26->Russian  27->Serbian(Cyrillic) 
+28->Slovak   29->Slovenian   30->Spanish   31->Swedish   32->Thai 33->Turkish 
+
+-- How to install: 
+      1. Enter the directory and run setup.exe. 
+      2. Follow the prompt and restart the system. 
+ 
+--How to Silent Install: 
+      1. Enter the directory and run setup.exe /s -f2"c:\setup.log" under command line. 
+      2. Or execute silent install Batch file. 
+ 
+-- How to Silent un-install: 
+      1. Enter the directory and run Setup.exe -uninst -s -f1"(Uninstall.iss Path)" -f2"c:\setup.log" under command line. 
+         p.s. The (Uninstall.iss Path) is the full path of the file ¡§Uninstall.iss¡¨.
+
+         For example , the full path of Uninstall.iss is ¡§c:\Realtek\11n USB WLAN Card¡¨ .The command will become 
+                       Setup.exe -uninst -s -f1"(Uninstall.iss Path)" -f2"c:\setup.log"
+
+      2. Or execute silent uninstall Batch file. 
+ 
+-- How to confirm driver version: 
+      1. Right click computer->Manage->Device Manager. 
+      2. Right click the Device Properties->Driver 
+
+
+########################################################
+Release Note:
+########################################################
+V1.00.0000  (2007/06/06) By Karl
+[UI]          
+                   RtWlan:V402, 1480, 0606, 2007 (By Karl)
+                   RTxAdmin :V1.0.402.2007 (By Karl)
+                   EAPInstall :V1.0.0.1 (By Karl)
+                   DESKTOP: V1.0.529.2007 (By Karl)
+                   SetDrv98: V400.1160.207.2007 (By Karl)
+                   SetDrv98: V400.1170.514.2007 (By Karl)
+                   SetDrv64:V400.1160.207.2007 (By Karl)
+
+                   RtlVistaStart:V1.0.0.1 (By Jacken)
+                   RtlStartInstal:(By Jacken)
+                   ScanDevInsert:(By Jacken)
+                   SetVistaDrv:(By Jacken)
+                   SetVistaDrv64:(By Jacken)
+
+                   Rtkbind: V1.0.0.1
+[LIB]
+                   RTlLIB(Eappkt): V220, 3100, 314, 2007 (By Karl)
+                   RtlLIB(Aegis): V330, 1060, 515, 2007 (By Karl)
+	RtlLIB(Vista): V330, 1060, 522, 2007  (By Mars)
+                  RtlGina :V1.0.0.3 (By Karl)
+                  EnumDevLib : V402.128.518.2007 (By Karl)
+                  RtlICS : V1.0.320.2007 (By Karl)
+
+                  IpLib: V1.0.0.1
+                  acAuth: V4.0.2.0
+[Protocol Driver]
+                  Eappkt: V5.0.2195.5438
+                  RtlProt: V6.0.6000.16386
+
+[Features]
+	Driver:
+                              new.
+	Utility:
+                              new.
+[ Script_Functions]
+                   add IsSupport();  //Chack Install support this operation system.
+	add IsSupportUI();  //Chack UI support this operation system.
+                   add SelDriver();    //Chack Driver Type.(85/85B/87/87B)
+
+	//Create country list ---------------------
+	add CreateCountryList ();
+	add SetSelectedCountry (STRING); 
+	add SelCountryDomains();
+	//----------------------------------------------  
+[Documentation]
+	(070606)RTALTEK Wireless Network Utility(v2.0).doc
+#########################################################
+V1.00.0001  (2007/06/14) By Karl
+[UI]          
+                   RtWlan:V402, 1480, 0606, 2007 (By Karl)
+[LIB]
+	UpDate: 
+                   RtlLIB(Vista): V330, 1090, 515, 2007  (for Vista By Mars)
+#########################################################
+V1.00.0002  (2007/06/15) By Karl
+
+[UI]
+	UpDate: 
+                   RtlLIB(Vista): V330, 1100, 615, 2007  (for Vista By Mars)
+#########################################################
+V1.00.0003  (2007/06/21) By Karl
+
+[LIB]
+	UpDate: 
+                   EAPInstall :V500.1001.621.2007 (By Karl)
+#########################################################
+V1.00.0004  (2007/06/25) By Karl
+
+[UI]
+	UpDate: 
+                   RtWLan :V402.1480.0612.2007 (By Vincent)
+#########################################################
+V1.00.0005  (2007/06/26) By Karl
+
+[UI]
+	UpDate: 
+                   RtWLan :V402.1490.0626.2007 (By Karl)
+#########################################################
+V1.00.0006  (2007/06/27) By Karl
+
+[UI]
+	UpDate: 
+                   RtWLan :V500.1491.0627.2007 (By Karl)
+#########################################################
+V1.00.0006  (2007/06/27) By Karl
+
+[UI]
+	UpDate: 
+                   RtWLan :V500.1491.0627.2007 (By Karl)
+##########################################################
+V1.00.0007  (2007/08/02) By Karl
+
+[UI]
+	UpDate: 
+                   RtWLan :V500.1493.724.2007  (By Karl & Jacken)
+[LIB]
+	UpDate: 
+                   RtlLIB(Vista): V330.1101.730.2007  (By Mars & Jacken)
+                   RtlLIB(2K/XP/2003):V402.1291.724.2007 (By Mars & Jacken)
+                   RtlLIB(98/ME): V220.3101.724.2007 (By Jacken)
+[Protocol Driver]
+                  Eappkt: V500.1001.802.2007  (By Mars)
+
+[ Script_Functions]
+                  1.Fix BACK Button bug.  (By Karl )
+                  2.Add OnMaintUIBefore() (about MODIFY / REPAIR / REMOVEALL)  (By Karl )
+                  3.Fix SetSelectedCountry(Channel plan) bug.  (By Karl )
+                  4. add Support InstallShield_Contact=nicfae@realtek.com.tw (IsConfig.INI).  (By Karl )
+                  5. add Support TARGETDIR=OEM\Wireless LAN Driver and Utility (IsConfig.INI).  (By Karl )
+ 
+#########################################################
+V1.00.0008  (2007/08/03) By Karl
+
+Support limit user for Vista UI.
+[UI]
+        Deletion:
+                 RtlVistaStart.exe (No longer needs to use)
+                 RtlStartInstal.exe (No longer needs to use)
+                 ScanDevInsert.exe (No longer needs to use)
+
+	ADD: 
+                 RtlService.exe : V500.1001.720.2007 (By Karl)
+                 //Run UI in the system service
+                 ReStart.exe : V500.1001.718.2007 (By Karl)
+                 //Control UI service
+
+#########################################################
+V1.00.0009  (2007/08/29) By Jacken
+
+Add 8190 Model
+[UI]
+        UpDate: 
+                   RtWLan :V500.1495.806.2007  (By Jacken)
+[LIB]
+        UpDate: 
+                   RtlLIB(Vista): V330.1120.827.2007  (By Mars & Jacken)
+                   RtlLIB(2K/XP/2003):V402.1292.803.2007 (By Mars & Jacken)
+                   RtlLIB(98/ME): V220.3103.815.2007 (By Jacken)
+#########################################################
+V1.00.0010  (2007/10/03) By Karl (¥u?EnstallShield SourceCode)
+
+
+[ Script_Functions]
+        Fix 802.1X Bug (About 802.1x not run on SYSTEM)
+#########################################################
+V1.00.0011  (2007/10/15) By Jacken
+
+[UI]
+        UpDate: 
+                   RtWLan :V500.1498.926.2007  (By Jacken)
+[LIB]
+        UpDate: 
+                   RtlLIB(Vista): V330.1123.912.2007  (By Mars)
+                   RtlLIB(2K/XP/2003):V402.1294.912.2007 (By Mars)
+                   RtlLIB(98/ME): V220.3103.815.2007 (By Jacken)
+#########################################################
+V1.00.0012  (2007/10/23) By Jacken
+
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1181.1023.2007
+		   SetVistaDrv(Vista) : V1.0.0.3 
+
+[UI]
+        UpDate: 
+                   RtWLan :V500.1502.1023.2007  (By Jacken)
+#########################################################
+V1.00.0013  (2007/10/29) By Jacken
+
+[InstallShield]
+        UpDate: 
+                   SetVistaDrv(Vista) : Use SetVistaDrv64 in WinX64  (By Jacken)
+
+[UI]
+        UpDate: 
+                   RtWLan :V500.1503.1025.2007  (By Jacken)
+#########################################################
+V1.00.0014  (2007/10/31) By Jacken
+
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1182.1031.2007
+
+[UI]
+        UpDate: 
+                   RtWLan :V500.1504.1030.2007  (By Jacken)
+#########################################################
+V1.00.0015  (2007/11/06) By Jacken
+
+[LIB]
+        UpDate: 
+                   RtlLib(Vista) :V402.1125.1101.2007 (By HPFan)
+#########################################################
+V1.00.0016  (2007/11/08) By Jacken
+
+[InstallShield]
+        UpDate: 
+                   SetDrv64(WinX64) : Use SetDrv64 in WinX64  (By Jacken)
+		   Script file : 1.Fixed copy inf in WinXP
+				 2.Add source folder in shortcut
+		   
+[UI]
+        UpDate: 
+                   RtWLan :V500.1505.1108.2007  (By Jacken)
+#########################################################
+V1.00.0017  (2007/11/12) By Jacken
+
+[LIB]
+        UpDate: 
+                RtlLib(XP) :V402.1298.1112.2007 (By HPFan)   
+#########################################################
+V1.00.0018  (2007/11/15) By Jacken
+
+[InstallShield]
+        UpDate: 
+                 Script file : 1.Fixed full path run issue. 
+[UI]
+        UpDate: 
+                 RtWLan :V500.1506.1115.2007  (By Jacken)
+#########################################################
+V1.00.0019  (2007/11/26) By Jacken
+
+[InstallShield]
+        UpDate: 
+                 Script file : 1.Add Model to support 8192U & 8192P 
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1183.1126.2007
+		   SetVistaDrv(Vista) : V1.0.0.4 
+[UI]
+        UpDate: 
+                 RtWLan :V500.1507.1126.2007  (By Jacken)
+		 RtlLib(XP) :V402.1296.1119.2007 (By HPFan)
+		 RtlLib(Vista) :V402.1129.1121.2007 (By HPFan)
+#########################################################
+V1.00.0020  (2007/11/27) By Jacken
+
+[InstallShield]
+        UpDate: 
+                 Script file : 1.Fixed "Wlan uitily" to "Wlan Utility"
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1184.1127.2007
+		   SetVistaDrv(Vista) : V1.0.0.5 
+[UI]
+        UpDate: 
+                 RtWLan :V500.1508.1127.2007  (By Jacken)
+#########################################################
+V1.00.0021  (2007/11/28) By Jacken
+
+[UI]
+        UpDate: 
+                 RtlLib :V402.1300.1128.2007  (By Mars)
+#########################################################
+V1.00.0022  (2007/11/29) By Jacken
+
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1185.1129.2007
+		   SetVistaDrv(Vista) : V1.0.0.6 
+[UI]
+        UpDate: 
+                 RtWLan :V500.1509.1129.2007  (By Jacken)
+#########################################################
+V1.00.0023  (2007/12/03) By Karl
+
+[UI]
+        UpDate: 
+                 RtWLan :V500, 1510, 1203, 2007  (By Karl)
+#########################################################
+V1.00.0024  (2007/12/10) By Jacken
+
+[UI]
+        UpDate: 
+                 RtWLan :V500.1511.1207.2007 (By Jacken)
+		 RtlLib(XP) :V402.1302.1207.2007  (By Mars)
+		 RtlLib(Vista) :V402.1130.1207.2007  (By Mars)		
+#########################################################
+V1.00.0025  (2007/12/13) By Jacken
+
+[SetDrv]
+        Update:  SetDrv(XP) : V400.1186.1213.2007
+[UI]
+        UpDate: 
+                 RtWLan :V500.1512.1212.2007 (By Jacken)
+		 RtlLib(XP) :V402.1304.1213.2007  (By Mars)
+		 RtlLib(Vista) :V402.1131.1213.2007  (By Mars)		
+#########################################################
+V1.00.0026  (2007/12/17) By Jacken
+
+[InstallShield]
+	Update:	 Fixed multi-language bug		 
+[SetDrv]
+        Update:  SetDrv(XP) : V400.1187.1217.2007 (By Jacken)	
+#########################################################
+V1.00.0027  (2007/12/19) By Jacken
+
+[UI]
+        UpDate: 
+                 RtWLan :V500.1513.1218.2007 (By Jacken)
+		 RtlLib(Vista) :V402.1132.1219.2007  (By Jacken)
+#########################################################
+V1.00.0028  (2007/12/21) By Jacken
+[InstallShield]
+	UpDate:  Fixed remove utility string
+[UI]
+        UpDate: 
+                 RtWLan :V500.1514.1221.2007 (By Jacken)
+		 RtlLib(XP) :V402.1305.1221.2007  (By Mars)
+		 RtlLib(Vista) :V402.1133.1221.2007  (By Mars)
+#########################################################
+V1.00.0029  (2008/01/03) By Jacken
+[UI]
+        UpDate: 
+                 RtWLan :V500.1515.0103.2008 (By Jacken)
+#########################################################
+V1.00.0030  (2008/01/07) By Vincent
+[UI]
+        UpDate: 
+                 Add "Cisco protocol install" option for Vista
+			in ISConfig.ini:
+				[Install]
+				InstallCiscoEAP=1
+#########################################################
+V1.00.0031  (2008/02/19) By hpfan
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1517.0219.2008 (By Jacken) 
+		RtlLib(Vista) :V402.1140.219.2008 (By hpfan)
+#########################################################
+V1.00.0032  (2008/03/14) By Jacken
+[SetDrv]
+        Update: SetDrv(98) : V400.1189.0314.2008 (By Jacken)
+		SetDrv(XP) : V400.1189.0314.2008 (By Jacken)
+		SetDrv(X64) : V400.1189.0314.2008 (By Jacken)
+#########################################################
+V1.00.0033  (2008/04/03) By Jacken
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1518.0403.2008 (By Jacken) 
+		 RtlLib(Vista) :V402.1141.402.2008 (By hpfan)
+		 RtlLib(XP) :V402.1313.402.2008 (By hpfan)
+#########################################################
+V1.00.0034  (2008/04/07) By Jacken
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1519.0407.2008 (By Jacken) 
+#########################################################
+V1.00.0035  (2008/04/09) By Jacken
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1520.0409.2008 (By Jacken) 
+		 RtlLib(Vista) :V402.1142.409.2008 (By Vincent)
+#########################################################
+V1.00.0036  (2008/04/14) By Jacken
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1522.0414.2008 (By Jacken) 
+		 RtlLib(XP) :V402.1316.414.2008 (By Jacken)
+		 RtlLib(Vista) :V402.1143.414.2008 (By Jacken)
+#########################################################
+V1.00.0037  (2008/04/15) By Jacken
+[UI]
+        UpDate:                 
+                 RtWLan :V500.1523.0415.2008 (By Jacken) 
+		 RtlLib(XP) :V402.1317.415.2008 (By Jacken)
+		 RtlLib(Vista) :V402.1144.415.2008 (By Jacken)
+#########################################################
+V1.00.0038  (2008/04/16) By Jacken
+[UI]
+        UpDate:                                  
+		 
+                 RtWLan :V500.1524.0416.2008 (By Jacken)
+              	 RtlLib(Vista) :V402.1145.416.2008 (By Jacken)
+#########################################################
+V1.00.0039  (2008/04/23) By Vincent
+[UI]
+        UpDate:                                  
+		 
+                 RtWLan :V500.1527.0423.2008 (Vincent)
+#########################################################
+V1.00.0040  (2008/04/24) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1528, 424, 2008 (By Karl)
+		RtWlan(Vista):V600, 1525, 424, 2008 (By Karl)
+
+[LIB]
+	UpDate:
+                RtlLIB(Aegis): V500, 1317, 0424, 2008 (By Karl)
+	        RtlLIB(Vista): V600, 1146, 0424, 2008 (By Karl)
+
+        Revision SiteSurvey issue.
+
+#########################################################
+V1.00.0041  (2008/04/28) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1529, 428, 2008 (By Karl)
+		RtWlan(Vista):V600, 1526, 428, 2008 (By Karl)
+
+        Revision Update View issue.
+
+#########################################################
+V1.00.0042  (2008/04/30) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1530, 430, 2008 (By Karl)
+
+        Revision Edit Profile issue.
+
+[ Script_Functions]
+        1.Fix REG Aegisp5.exe BUG for Uninstall. 
+
+#########################################################
+V1.00.0043  (2008/04/30) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1531, 430, 2008 (By Karl)
+                RtWlan(Vista):V600, 1527, 430, 2008 (By Karl)
+
+        Revision Open multi-UI issue.
+
+#########################################################
+V1.00.0045  (2008/05/02) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1532, 502, 2008 (By Karl)
+                RtWlan(Vista):V600, 1532, 502, 2008 (By Karl)
+
+        Revision S3/S4 issue.
+
+#########################################################
+V1.00.0046  (2008/05/05) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1533, 505, 2008 (By Karl)
+                RtWlan(Vista):V600, 1533, 505, 2008 (By Karl)
+
+        Revision Read .ini issue.
+
+#########################################################
+V1.00.0047  (2008/05/06) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1534, 506, 2008 (By Karl)
+                RtWlan(Vista):V600, 1534, 506, 2008 (By Karl)
+
+
+#########################################################
+V1.00.0048  (2008/05/12) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1535, 512, 2008 (By Karl)
+                RtWlan(Vista):V600, 1535, 512, 2008 (By Karl)
+[LIB]
+	UpDate:
+                RtlLIB(Aegis): V500, 1319, 512, 2008 (By Karl)
+	        RtlLIB(Vista): V600, 1150, 512, 2008 (By Karl)
+[ Script_Functions]
+        1.Fix support install multi-Driver.
+        2.Remove install Eappkt for Win2K ~ 2003.
+
+        Show Rx Rate issue.
+
+#########################################################
+V1.00.0049  (2008/05/14) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1536, 514, 2008 (By Karl)
+                RtWlan(Vista):V600, 1536, 514, 2008 (By Karl)
+[LIB]
+	UpDate:
+                RtlLIB(Aegis): V500, 1320, 514, 2008 (By Hpfan)
+
+
+        Show Page & WPS issue.
+
+#########################################################
+V1.00.0050  (2008/05/19) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1537, 516, 2008 (By Hpfan)
+                RtWlan(Vista):V600, 1537, 516, 2008 (By Hpfan)
+
+
+        Fix BUG for WPS connect.
+
+#########################################################
+V1.00.0051  (2008/05/21) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1538, 521, 2008 (By Karl)
+                RtWlan(Vista):V600, 1538, 521, 2008 (By Karl)
+[LIB]
+	UpDate:
+                RtlLIB(Aegis): V500, 1322, 521, 2008 (By Hpfan)
+	        RtlLIB(Vista): V600, 1151, 521, 2008 (By Hpfan)
+
+
+        Add WPS external registrar.
+
+#########################################################
+V1.00.0051 (2)(2008/05/22) By Karl
+
+[LIB]
+	UpDate:
+	        RtlLIB(Vista): V600, 1152, 522, 2008 (By Karl)
+
+
+        Fix 802.1x BUG.
+
+#########################################################
+V1.00.0052  (2008/05/23) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1539, 523, 2008 (By Karl)
+                RtWlan(Vista):V600, 1539, 523, 2008 (By Karl)
+
+
+        fix bug for Switch AP/Station Mode.
+
+#########################################################
+V1.00.0053  (2008/05/26) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1540, 526, 2008 (By Karl)
+                RtWlan(Vista):V600, 1540, 526, 2008 (By Karl)
+
+
+        fix bug for Profile Edit.
+
+#########################################################
+V1.00.0054  (2008/05/29) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1541, 529, 2008 (By Karl)
+                RtWlan(Vista):V600, 1541, 529, 2008 (By Karl)
+[LIB]
+	UpDate:
+	        RtlLIB(Vista): V600, 1153, 529, 2008 (By Karl)
+
+        Revises Disable/Enable NIC.
+
+#########################################################
+V1.00.0055  (2008/06/11) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Vista):V600, 1542, 611, 2008 (By Karl)
+
+
+        Revises S3.
+
+#########################################################
+V1.00.0056  (2008/06/13) By Karl
+[UI] 
+	UpDate:        
+                RtlLIB(Aegis): V500, 1323, 613, 2008 (By CCX)
+
+
+        In PEAP-GTC enable Fast-connent.
+
+#########################################################
+V1.00.0057  (2008/06/18) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1543, 618, 2008 (By Karl)
+                RtWlan(Vista):V600, 1543, 618, 2008 (By Karl)
+
+
+        Revises enable/disable external registrar.
+
+#########################################################
+V1.00.0058  (2008/06/20) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1545, 619, 2008 (By Karl)
+                RtWlan(Vista):V600, 1545, 619, 2008 (By Karl)
+ 
+                RtlLIB(98/ME): V220.3104.620.2008 (By Karl)
+
+        Revision is unable to carry out in Win98/ME (V1.00.0019 ~ V1.00.0057 )
+        and UILinkDefaultProfile() function.
+
+#########################################################
+V1.00.0059  (2008/06/23) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1546, 623, 2008 (By Karl)
+                RtWlan(Vista):V600, 1546, 623, 2008 (By Karl)
+ 
+                RtlLIB(Aegis): V500, 1324, 0623, 2008 (By Hpfan)
+                RtlLIB(Vista): V600, 1154, 0623, 2008 (By Hpfan)
+
+        Add Input PIN_Code from AP (WPS).
+#########################################################
+V1.00.0060  (2008/06/27) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1547, 626, 2008 (By Karl)
+                RtWlan(Vista):V600, 1547, 626, 2008 (By Karl)
+
+[Languages]     Revision French(Standard) string.ini
+
+        Add string for multi- language.
+#########################################################
+V1.00.0061  (2008/07/01) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1548, 701, 2008 (By Karl)
+                RtWlan(Vista):V600, 1548, 701, 2008 (By Karl)
+
+                RtlLIB(Vista): V600, 1155, 701, 2008 (By Karl)
+
+        Quickening Setting for ICS.
+#########################################################
+V1.00.0062  (2008/07/02) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1549, 702, 2008 (By Karl)
+                RtWlan(Vista):V600, 1549, 702, 2008 (By Karl)
+
+
+        Revises UILinkDefaultProfile for S4(RTL8190).
+#########################################################
+V1.00.0063  (2008/07/03) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1550, 703, 2008 (By Karl)
+                RtWlan(Vista):V600, 1550, 703, 2008 (By Karl)
+[ Script_Functions]
+        support customization multi- language files for [Languages] path.
+
+        Revises Setting Defaults (WirelessMode/ChannelPlan).
+#########################################################
+V1.00.0064  (2008/07/11) By Karl
+[LIB] 
+	UpDate:        
+                RtlLIB(Aegis): V500, 1327, 0710, 2008 (By Hpfan)
+                RtlLIB(Vista): V600, 1158, 710, 2008 (By Hpfan)
+
+        Fix WPS when receiving incorrect public key.
+#########################################################
+V1.00.0065  (2008/07/16) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1552, 716, 2008 (By Karl)
+                RtWlan(Vista):V600, 1552, 716, 2008 (By Karl)
+ 
+                RtlLIB(Aegis): V500, 1328, 0715, 2008 (By Hpfan)
+                RtlLIB(Vista): V600, 1159, 715, 2008 (By Hpfan)
+
+        1.Fix WPS TKIP issue.
+        2.Supports the multi-language for Show TrayIcon.
+#########################################################
+V1.00.0066  (2008/07/29) By Karl
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1553, 729, 2008 (By Karl)
+                RtWlan(Vista):V600, 1553, 729, 2008 (By Karl)
+ 
+        1.UI crash for WPS.
+        2.fix the multi-language string for "MAC Address".
+
+[LIB] 
+                RtlLIB(Aegis): V500, 1330, 0729, 2008 (By Mars)
+                RtlLIB(Vista): V600, 1161, 729, 2008 (By Mars)
+
+        1. Add WPS_FAIL in wsc_def.h for timeout and chanel but linked
+	2. Add WPS_FAIL in EAP_SEND_ACK and FreeFlag to disconnect AP
+#########################################################
+V1.00.0067  (2008/08/15)  
+[ Script_Functions]
+        Add install hotfix kb233030 for Vista os.
+
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1554, 815, 2008 (By Karl)
+                RtWlan(Vista):V600, 1554, 815, 2008 (By Karl)
+
+        1.show WPS_Page BUG for Resize.
+[LIB] 
+                RtlLIB(Aegis): V500, 1331, 0808, 2008 (By Mars)
+                RtlLIB(Vista): V600, 1162, 808, 2008 (By Mars)
+
+        1. Add WPS_FAIL in wsc_def.h for timeout and chanel but linked
+	2. Add WPS_FAIL in EAP_SEND_ACK and FreeFlag to disconnect AP
+
+#########################################################
+V1.00.0068  (2008/08/20)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1555, 820, 2008 (By Karl)
+                RtWlan(Vista):V600, 1555, 820, 2008 (By Karl)
+
+#########################################################
+V1.00.0069  (2008/08/25)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1556, 825, 2008 (By Karl)
+                RtWlan(Vista):V600, 1556, 825, 2008 (By Karl)
+
+                EnumDevLib : V500.1031.825.2008 (By Karl)
+
+#########################################################
+V1.00.0070  (2008/09/02)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1557, 902, 2008 (By Karl)
+                RtWlan(Vista):V600, 1557, 902, 2008 (By Karl)
+
+
+#########################################################
+V1.00.0071  (2008/09/18)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1558, 918, 2008 (By Karl)
+                RtWlan(Vista):V600, 1558, 918, 2008 (By Karl)
+[LIB] 
+                RtlLIB(Aegis): V500, 1336, 918, 2008 (By Karl)
+
+
+#########################################################
+V1.00.0072  (2008/09/25)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V500, 1559, 925, 2008 (By Jacken)
+                RtWlan(Vista):V600, 1559, 925, 2008 (By Jacken)
+
+#########################################################
+V1.00.0073  (2008/10/01)  
+[UI] 
+	UpDate:        
+                Add "HotFix" & "DEP" Function
+
+#########################################################
+V1.00.0074  (2008/10/03)  
+[UI] 
+	UpDate:        
+                Test for 2in1 driver
+
+#########################################################
+V1.00.0075  (2008/10/08)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V500, 1560, 1008, 2008 (By Jacken)
+                RtWlan(Vista):V600, 1560, 1008, 2008 (By Jacken)
+[LIB] 
+                RtlLIB(Vista):V700, 1002, 1008, 2008 (By Jacken)
+
+#########################################################
+V1.00.0076  (2008/10/23)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1561, 1022, 2008 (By Karl)
+                RtWlan(Vista):V600, 1561, 1022, 2008 (By Karl)
+[LIB] 
+                RtlLIB(IHV):V700, 1004, 1022, 2008 (By Karl)
+                RtlICS : V600, 1005, 1023, 2008 (By Karl)
+
+#########################################################
+V1.00.0077  (2008/10/29)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1562, 1027, 2008 (By Karl)
+                RtWlan(Vista):V600, 1562, 1027, 2008 (By Karl)
+[LIB] 
+                RtlLIB(IHV):V700, 1005, 1029, 2008 (By Hpfan)
+#########################################################
+V1.00.0078  (2008/11/05)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1563, 1105, 2008 (By Karl)
+                RtWlan(Vista):V600, 1563, 1105, 2008 (By Karl)
+                
+                Run1x:V600, 1001, 1105, 2008 (By Karl)
+                RTLDHCP:V600, 1001, 1105, 2008 (By Karl)
+
+#########################################################
+V1.00.0079  (2008/11/20)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1564, 1120, 2008 (By Karl)
+                RtWlan(Vista):V600, 1564, 1120, 2008 (By Karl)
+                
+[LIB] 
+                RtlLIB(IHV):V700, 1006, 1120, 2008 (By Karl)
+
+#########################################################
+V1.00.0080  (2008/12/01)  
+[ Script_Functions] 
+	UpDate: 
+		1.Fixed 819xSE can't install issue(By Vincentc) 
+
+########################################################
+V1.00.0081  (2008/12/17)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1565, 1216, 2008 (By Jacken)
+                RtWlan(Vista):V600, 1565, 1216, 2008 (By Karl)
+[ Script_Functions] 
+	UpDate: 
+		1.Install multi type model(By Jacken)               
+		
+########################################################
+V1.00.0082  (2008/12/26)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V600, 1566, 1226, 2008 (By Jacken)
+                RtWlan(Vista):V600, 1566, 1226, 2008 (By Jacken)            
+		
+########################################################
+V1.00.0090  (2009/1/15)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V700, 1567, 0115, 2009 (By Karl)
+                RtWlan(Vista):V700, 1567, 0113, 2009 (By Karl)   
+
+                IpLib: V600.1001.1231.2008 (By Karl)  
+
+		RtlGina :V500.1001.1214.4016  
+                acAuth: V4.1.0.87   
+  
+[LIB] 
+                RtlLIB(IHV):V700, 1008, 115, 2009 (By Karl)  
+                RtlLIB(Aegis_CCX4): V500, 1342, 115, 2009 (By Karl)
+
+[ Script_Functions]
+                1.Fix support RtlGina.(By Karl)  
+                2.add Support Win7;
+		
+########################################################
+V1.00.0091  (2009/1/21)  
+[UI] 
+	UpDate:        
+                RtWlan(Vista):V700, 1568, 121, 2009 (By Karl)   
+
+########################################################
+V1.00.0092  (2009/2/12)  
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V700, 1568, 212, 2009 (By Karl)  
+ 
+[LIB] 
+                RtlLIB(Aegis_CCX4): V500, 1348, 212, 2009 (By Karl)
+
+########################################################
+V1.00.0093  (2009/2/17)  
+ 
+[LIB] 
+                RtlLIB(Aegis_CCX4): V500, 1349, 217, 2009 (By Karl)
+
+########################################################
+V1.00.0094  (2009/3/06)  
+
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V700, 1569, 306, 2009 (By Karl)  
+ 
+[LIB] 
+                RtlLIB(Aegis_CCX4): V500, 1350, 306, 2009 (By Karl)
+
+########################################################
+V1.00.0095  (2009/3/13)  
+
+[UI] 
+	UpDate:        
+                RtWlan(Vista):V700.1569.312.2009 (By Karl)  
+ 
+[LIB] 
+                RtlLIB(Vista): V700.1011.312.2009 (By Karl)
+
+         ADD:   RtlIhvOid(Vista): V1.1001.218.2009 (By Karl)
+                RtlIhvOid(Win7): V1.1001.218.2009 (By Karl)
+               
+########################################################
+V1.00.0096  (2009/3/24)  
+
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1351.324.2009 (By Karl)  
+ 
+[LIB] 
+                RtlLIB(Aegis): V700.1570.324.2009 (By Karl)
+               
+########################################################
+V1.00.0097  (2009/3/26)  
+
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1570.326.2009 (By Karl)  
+                RtWlan(Vista):V700.1570.326.2009 (By Karl) 
+               
+########################################################
+V1.00.0098  (2009/4/03)  
+
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1571.403.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1571.403.2009 (By Karl)  
+ 
+[LIB] 
+                RtlLIB(Win7/Vista): V700.1012.403.2009 (By Karl)
+               
+########################################################
+V1.00.0099  (2009/4/13)   
+ 
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1013, 413, 2009 (By hpfan)
+                RtlLIB(Aegis4.1): V500, 1352, 413, 2009 (By hpfan)
+                Revise WPS IE buffer length
+               
+########################################################
+V1.00.0100  (2009/4/15)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1572.415.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1572.415.2009 (By Karl)  
+ 
+               
+########################################################
+V1.00.0101  (2009/4/29)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1573.428.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1573.428.2009 (By Karl)  
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1014, 429, 2009 (By Karl)
+
+                RtlIhvOid(Vista): V1.1002.428.2009 (By Karl)
+                RtlIhvOid(Win7): V1.1002.428.2009 (By Karl)
+               
+########################################################
+V1.00.0102  (2009/4/30)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1574.430.2009 (By Karl)  
+
+########################################################
+V1.00.0103  (2009/5/5)   
+ 
+[ Script_Functions]
+	UpDate:        
+                Revises Driver path to separate (WinXP2k to WinXP & Win2K) 
+
+########################################################
+V1.00.0104  (2009/5/07)   
+ 
+[LIB] 
+        UpDate: 
+                RtlLIB(Aegis4.1): V500.1574.507.2009 (By Karl)
+
+########################################################
+V1.00.0105  (2009/5/11)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1575.511.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1575.511.2009 (By Karl)  
+[SetDrv]
+        Update:    SetDrv(XP) : V400.1185.1129.2007
+		   remove SetVistaDrv(Vista) for Vista os.
+
+########################################################
+V1.00.0106  (2009/5/13)   
+ 
+[Aegis] 
+	UpDate:        
+                Aegis Protocol V3.7.5.0 (By Karl)  
+
+
+########################################################
+V1.00.0107  (2009/5/22)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V500.1576.522.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1576.522.2009 (By Karl)  
+
+
+########################################################
+V1.00.0108  (2009/5/27)   
+ 
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1016, 0526, 2009 (By hpfan)
+                RtlLIB(Aegis4.1): V500, 1355, 526, 2009 (By hpfan)
+  	Notes:
+        	1. Revise device information for WPS M1 usage
+        	2. Revise WPS WEP copy key length
+########################################################
+V1.00.0109  (2009/6/01)   
+ 
+[InstallShield] 
+        UpDate: 
+                UpDate InstallShield 2009
+  	Notes:
+        	1. Fix Win7 BUG
+########################################################
+V1.00.0110  (2009/6/16)   
+ 
+[InstallShield] 
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1017, 616, 2009 (By Karl)
+                RtlLIB(Aegis4.1): V500, 1356, 616, 2009 (By CCW)
+        Notes: FIX PAC (CCX)
+########################################################
+V1.00.0111  (2009/6/22)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Win7/Vista):V700.1577.622.2009 (By Karl)  
+
+        Notes: Fix S3 for SoftAP 
+########################################################
+V1.00.0112  (2009/6/23)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis):V700, 1577, 623, 2009 (By CCW)  
+                RtlGina:V500, 1003, 623, 2009 (By CCW) 
+[LIB] 
+        UpDate: 
+                RtlLIB(Aegis4.1): V500, 1357, 623, 2009 (By CCW & Karl)
+
+        Notes: Add Message for CCX
+########################################################
+V1.00.0112  (2009/6/24)   
+ 
+[UI] 
+	UpDate:        
+                RtlGina:V500, 1004, 624, 2009 (By Bruce) 
+
+
+        Notes: Add Message for CCX
+########################################################
+V1.00.0113  (2009/6/30)   
+
+[InstallShield]  
+        UpDate: 
+                SetVistaDrv : 1.0.0.9 (By Jacken)
+		SetVistaDrv64 : 1.0.0.9 (By Jacken)
+		DIFXAPI : 2.1.0.0 (By Jacken)
+		1.Fix reinstall issue.
+		 
+[UI] 
+	UpDate:        
+                RtlService : 500.1003.630.2009 (By Jacken)
+
+
+        Notes: Reinstall
+########################################################
+V1.00.0114  (2009/7/03)   
+
+[InstallShield] 
+        UpDate: 
+                Remove CISCO Module (By Jacken)
+
+
+        Notes: Remove 
+########################################################
+V1.00.0115  (2009/7/03)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V700.1578.703.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1578.703.2009 (By Karl)  
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1017, 0702, 2009 (By Karl)
+
+        Notes: Set TxPower Percentage      
+########################################################
+V1.00.0115  (2009/7/07)   
+ 
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700, 1018, 0707, 2009 (By Mars)
+
+        Notes: WPS UI Sync Enhancement      
+########################################################
+V1.00.0116  (2009/7/13)   
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V700.1579.709.2009 (By Karl)  
+                RtWlan(Win7/Vista):V700.1579.709.2009 (By Karl)  
+
+                RtlService : 700.1002.710.2009(By Karl)  
+
+        Notes: Rewrites profile      
+########################################################
+V1.00.0117  (2009/7/16)   
+
+[InstallShield]  
+        UpDate: 
+                SetVistaDrv : 1.0.0.10 (By Jacken)
+		SetVistaDrv64 : 1.0.0.10 (By Jacken)
+		SetDrv : 400.1194.714.2009 (By Jacken)
+		SetDrv64 : 400.1194.714.2009 (By Jacken)
+
+		1.Fix WinX64 Pre install issue.
+		2.Fix DEP List can't remove issue
+		3.Remove Win7 Virtual WiFi
+		4.Clear .sys in system after uninstall driver			
+ 
+[UI] 
+	UpDate:        
+                RtWlan(Aegis4.1):V700.1580.712.2009 (By Jacken)  
+                RtWlan(Win7/Vista):V700.1580.712.2009 (By Jacken)  
+
+
+        Notes: Fix Win7 SoftAP Status     
+########################################################
+V1.00.0118  (2009/7/17)   
+
+[InstallShield]  
+        UpDate: 
+                Add Realtek sign in setup.exe		
+    
+########################################################
+V1.00.0119  (2009/7/21)   
+
+[UI] 
+	UpDate:     
+                RtlIhvOid(Vista): V1.1003.720.2009 (By Karl)   
+                RtlLIB(Win7/Vista): V700.1020.721.2009 (By Karl)
+                RtWlan(Win7/Vista):V700.1581.721.2009 (By Karl)  
+[InstallShield]  
+        UpDate: 
+                SetVistaDrv : 1.0.0.11 (By Jacken)
+		SetVistaDrv64 : 1.0.0.11 (By Jacken)	
+    
+########################################################
+V1.00.0120  (2009/7/22)   
+
+[UI]
+	Update :
+		RtlLIB(Win7/Vista): V700.1021.721.2009 (By Karl)	
+
+[InstallShield]  
+        UpDate: 
+                New version CISCO Module (By Jacken)
+########################################################
+V1.00.0121  (2009/7/27)   
+
+[UI] 
+	UpDate:    
+                RtlLIB(Win7/Vista): V700.1022.724.2009 (By Karl)
+                RtWlan(Win7/Vista):V700.1583.724.2009 (By Karl)  
+                RtWlan(Aegis4.1):V700.1581.724.2009 (By Karl)  
+    
+########################################################
+V1.00.0122  (2009/8/04)   
+
+[UI] 
+	UpDate:    
+                RtlLIB(Win7/Vista): V700.1023.804.2009 (By Jacken)
+                RtWlan(Win7/Vista):V700.1583.804.2009 (By Jacken)
+                RtWlan(Aegis4.1):V700.1583.804.2009 (By Jacken)
+
+[InstallShield]
+	1.Remove Install Hotfix Message.
+    
+########################################################
+V1.00.0123  (2009/8/14)   
+
+[UI] 
+	UpDate:    
+                RtlLIB(Win7/Vista): V700.1024.812.2009 (By Jacken)
+                RtWlan(Win7/Vista):V700.1584.814.2009 (By Jacken)
+                RtWlan(Aegis4.1):V700.1584.814.2009 (By Jacken)
+		
+
+[InstallShield]
+                SetVistaDrv : 1.0.0.12 (By Jacken)
+		SetVistaDrv64 : 1.0.0.12 (By Jacken)	
+    
+########################################################
+V1.00.0124  (2009/8/18)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1585.818.2009 (By Jacken)
+                RtWlan(Aegis4.1):V700.1585.818.2009 (By Jacken)
+    
+########################################################
+V1.00.0125  (2009/8/26)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1586.825.2009 (By Karl)
+                RtWlan(Aegis4.1):V700.1586.825.2009 (By Karl)
+
+[ Script_Functions]
+                Add Set Defaults TxPower_Percentage on text.file
+
+########################################################
+V1.00.0126  (2009/9/01)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1587.901.2009 (By Karl)
+                RtWlan(Aegis4.1):V700.1587.901.2009 (By Karl)
+                
+                RtlService : V700.1003.901.2009 (By Karl)
+
+[ LIB]
+       UpDate:  enumdevlib:700.1033.828.2009(By Karl)
+
+    1.Increases the accurate judgment to insert(plug-in)/Unplug the card (Use few CPU resources).
+    2.Support many hardware names.
+
+########################################################
+V1.00.0127  (2009/9/07)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1588.907.2009 (By Karl)
+        Supports the control Show/Hide VWiFi(Win7) for INI file
+
+########################################################
+V1.00.0128  (2009/9/14)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1588.914.2009 (By Vincent)
+                RtWlan(Aegis4.1):V700.1589.914.2009 (By Vincent)
+                
+########################################################
+V1.00.0129  (2009/9/22)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Aegis4.1):V700.1590.917.2009 (By Karl)
+                RtWlan(Win7/Vista):V700.1590.922.2009 (By Karl)
+[ LIB]
+	UpDate:
+                RtlLIB(Win7/Vista): V700.1025.917.2009 (By Karl)
+		RtlIhvOid(Vista/Win7): V1.1004.916.2009 (By Karl)   
+        Fix OID Hung on connection        
+########################################################
+V1.00.0130  (2009/9/30)   
+
+[UI] 
+	UpDate:    
+                RtWlan(Win7/Vista):V700.1591.930.2009 (By Karl)
+
+########################################################
+V1.00.0131  (2009/10/12)   
+
+[ LIB]
+	UpDate:
+                RtlLIB(Win7/Vista): V700.1026.1005.2009 (By Karl)
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700.1592.1008.2009 (By Karl)
+
+
+########################################################
+InstallShield V1.00.0132  (2009/10/15)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700.1593.1013.2009 (By Karl)
+		RtWlan(Aegis4.1):V700, 1591, 1015, 2009 (By Karl)
+
+
+########################################################
+InstallShield V1.00.0133  (2009/10/19)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700.1594.1019.2009 (By Karl)
+
+
+########################################################
+InstallShield V1.00.0134  (2009/10/23)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700.1595.1023.2009 (By Karl)
+
+[ LIB]
+	UpDate:
+                RtlIhvOid(Vista/Win7): V1.1005.921.2009 (By Karl)
+
+########################################################
+InstallShield V1.00.0135  (2009/10/30)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700.1596.1030.2009 (By Karl)
+
+
+        Support RtlDHCP on Win7 SoftAP
+########################################################
+InstallShield V1.00.0136  (2009/11/03)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Aegis4.1):V700, 1592, 1103, 2009 (By Karl)
+
+
+        Fix Init time for 92SU
+########################################################
+InstallShield V1.00.0137  (2009/11/09)   
+
+[UI] 
+	UpDate:   
+                RtWlan(Win7/Vista):V700, 1597, 1109, 2009 (By Karl)
+[ LIB]
+	UpDate:
+		            RtlIhvOid(Vista/Win7): V1.1006.1106.2009 (By Karl)  
+                RtlICS : V600.1006.1109.2009 (By Karl)
+
+        Support 3G Modem shared for ICS
+########################################################
+InstallShield V1.00.0138  (2009/11/17)   
+
+[InstallShield] 
+	UpDate:   
+                Fixed current path error issue (By Jacken)
+########################################################
+InstallShield V1.00.0139  (2009/11/25)   
+
+[InstallShield] 
+	UpDate:   
+                Fixed x64 will jump my document folder issue (By Jacken)
+                SetVistaDrv : 1.0.0.14 (By Jacken)
+		SetVistaDrv64 : 1.0.0.14 (By Jacken)
+		SetDrv : 400.1195.1126.2009 (By Jacken)
+		SetDrv64 : 400.1195.1126.2009 (By Jacken)
+########################################################
+InstallShield V1.00.0140  (2009/12/03)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1599, 1203, 2009 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1599, 1203, 2009 (By Jacken)
+		RtlLIB(Aegis4.1): V700.1026.1005.2009 (By Jacken)
+		RtlLIB(Win7/Vista): V700.1026.1005.2009 (By Jacken)
+[ LIB]
+	UpDate:
+		RtlIhvOid(Vista/Win7): V1.1007.1202.2009 (By Vincent)  
+########################################################
+InstallShield V1.00.0141  (2009/12/07)   
+
+[UI] 
+	UpDate:   
+		RtlService.exe : V500.1004.1207.2009 (By Jacken)
+		RtWlan(Aegis4.1):V700, 1600, 1207, 2009 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1600, 1207, 2009 (By Jacken)
+########################################################
+InstallShield V1.00.0142  (2009/12/09)   
+
+[UI] 
+	UpDate:   
+		EnumDevLib.dll : V700.1034.1209.2009 (By Jacken)
+		RtWlan(Aegis4.1):V700, 1601, 1209, 2009 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1601, 1209, 2009 (By Jacken)
+########################################################
+InstallShield V1.00.0143  (2009/12/17)   
+
+
+[InstallShield] 
+	UpDate:   
+                1.Add Silent Uninstall Support (By Jacken)
+		2.Fixed delete "InstallShield Uninstall Information" registry issue. 
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1602, 1224, 2009 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1602, 1224, 2009 (By Jacken)
+		RtlIhvOid:1.1008.1224.2009 (By Jacken)
+		RtlLIB(XP): V500.1358.1210.2009 (By HPFan)
+		RtlLIB(Win7/Vista): V700.1033.1224.2009 (By Jacken)
+########################################################
+InstallShield V1.00.0144  (2009/12/31)   
+
+
+[InstallShield] 
+	UpDate:   
+                1.Remove add DEP registry function (By Jacken)
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1603, 1231, 2009 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1603, 1231, 2009 (By Jacken)
+########################################################
+InstallShield V1.00.0145  (2010/01/08)   
+
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1604, 0108, 2010 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1604, 0108, 2010 (By Jacken)
+		RtlLIB(Win7/Vista): V700.1034.0108.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0146  (2010/01/26)   
+
+[InstallShield] 
+	UpDate:   
+                1.Add to support 8192CU (By Jacken)
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1605, 0126, 2010 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1605, 0126, 2010 (By Jacken)
+		RtlLIB(Aegis4.1): V500.1060.0112.2010 (By HPFan)
+		RtlLIB(Win7/Vista): V700.1035.0112.2010 (By HPFan)
+########################################################
+InstallShield V1.00.0147  (2010/02/08)   
+
+[InstallShield] 
+	UpDate:   
+                1.change 8192CU phy folder name to rtl819cu(By Jacken)
+
+[UI] 
+	UpDate:   
+		RtlLIB(Win7/Vista): V700.1036.0208.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0148  (2010/03/01)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1606, 0224, 2010 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1606, 0224, 2010 (By Jacken)
+		RtlLIB(Win7/Vista): V700.1037.0212.2010 (By HPFan)
+########################################################
+InstallShield V1.00.0149  (2010/03/10)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700, 1608, 0310, 2010 (By Jacken)
+                RtWlan(Win7/Vista):V700, 1608, 0310, 2010 (By Jacken)
+		RtlLIB(Win7/Vista): V700.1038.0310.2010 (By Karl)
+########################################################
+InstallShield V1.00.0150  (2010/03/25)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700.1609.0325.2010 (By Karl)
+                RtWlan(Win7/Vista):V700.1609.0325.2010 (By Karl)
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1039.0324.2010 (By Karl)
+                RtlLIB(Aegis4.1): V500.1361.0324.2010 (By Karl)
+########################################################
+InstallShield V1.00.0151  (2010/04/07)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700.1610.0407.2010 (By Karl)
+                RtWlan(Win7/Vista):V700.1610.0407.2010 (By Karl)
+
+                Run1X(Win7/Vista):V1.1.406.2010 (By Karl)
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1041.0407.2010 (By Karl)
+########################################################
+InstallShield V1.00.0152  (2010/04/21)   
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700.1611.0416.2010 (By Jacken)
+		RtlLoginProg:V1.0.0.1                
+		RtWlan(Win7/Vista):V700.1611.0416.2010 (By Jacken)
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1042.0416.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0153  (2010/05/3)   
+
+[InstallShield] 
+
+InstallScript : 1.Fix load ISLangUni.ini BUG (Only can Load CHINESE TRADITIONAL/CHINESE SIMPLIFIED Other are ENGLISH ) (By Karl) 
+                2.support language for ARABIC/HEBREW . (By Karl)  
+	UpDate:  
+		ISLangUni.ini (support language for ARABIC/HEBREW and add string for Msg_Run_Admin/Msg_OS_not_support/Msg_HW_fail) (By Karl)  
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700.1612.0503.2010 (By Karl))              
+		RtWlan(Win7/Vista):V700.1612.0503.2010 (By Karl))
+                
+                RtlService.exe : V500.1006.0416.2009 (By Karl)
+########################################################
+InstallShield V1.00.0154  (2010/05/06)   
+
+[InstallShield] 
+
+[UI] 
+	UpDate:   
+		RtWlan(Aegis4.1):V700.1613.0506.2010 (By Jacken)             
+		RtWlan(Win7/Vista):V700.1613.0506.2010 (By Jacken)
+		RtlDHCP:V1.0.0.6 (By Jacken)
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1043.0506.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0155  (2010/05/11)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1612.0511.2010 (By Karl)
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1043.0506.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0156  (2010/05/24)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1614.0524.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1614.0524.2010 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1044.0524.2010 (By Jacken)
+		RtlIhvOid(Vista): V1.1010.524.2010 (By Jacken)
+                RtlIhvOid(Win7): V1.1010.524.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0157  (2010/05/31)   
+
+[InstallShield] 
+	UpDate:   
+                Fixed x64 can't delete read-only driver ins system32 issue (By Jacken)
+                SetVistaDrv : 1.0.0.19 (By Jacken)
+		SetVistaDrv64 : 1.0.0.19 (By Jacken)
+		SetDrv : 400.1197.0531.2010 (By Jacken)
+		SetDrv64 : 400.1197.0531.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0158  (2010/06/03)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1615.0603.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1615.0603.2010 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1045.0603.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0159  (2010/06/09)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1616.0609.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1616.0609.2010 (By Jacken)
+		RTLDHCP.exe:1.0.0.9		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1046.0609.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0161  (2010/07/05)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1617.0702.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1617.0702.2010 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1047.0702.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0162  (2010/07/13)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1619.0712.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1619.0712.2010 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1049.0712.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0163  (2010/07/16)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1621.0719.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1621.0719.2010 (By Jacken)
+		RtlDHCP:1.0.0.10 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1051.0720.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0164  (2010/07/23)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1622.0723.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1622.0723.2010 (By Jacken)
+		RtlDHCP:1.0.0.11 (By Jacken)		
+                
+[LIB] 
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1052.0723.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0165  (2010/07/27)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1623.0727.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1623.0727.2010 (By Jacken)
+[LIB] 
+        UpDate: 
+		RtlIhvOid(Vista): V1.1011.727.2010 (By Jacken)
+                RtlIhvOid(Win7): V1.1011.727.2010 (By Jacken)	
+########################################################
+InstallShield V1.00.0166  (2010/08/03)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1624.0803.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1624.0803.2010 (By Jacken)
+[LIB] 
+        UpDate: 
+		RtlIhvOid(Vista): V1.1013.802.2010 (By Jacken)
+                RtlIhvOid(Win7): V1.1013.802.2010 (By Jacken)	
+		RtlLIB(Win7/Vista): V700.1053.0802.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0167  (2010/08/10)   
+
+
+[InstallShield] 
+	UpDate:   
+                1.Fixed issue of "Standard user install fail" (By Jacken)
+		2.Fixed issue of "CISCO module can't be install from network install"
+########################################################
+InstallShield V1.00.0168  (2010/08/19)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1625.0818.2010 (By Jacken)
+		RtWlan(Aegis4.1):V700.1625.0818.2010 (By Jacken)
+[LIB] 
+        UpDate: 
+		RtlLIB(Aegis4.1): V500.1063.0812.2010 (By Jacken)
+		RtlLIB(Win7/Vista): V700.1057.0818.2010 (By Jacken)
+
+[InstallShield] 
+	UpDate:   
+                1.Disable ICS when uninstall utility (By Jacken)
+########################################################
+
+InstallShield V1.00.0169  (2010/08/24)  (By Vincent)
+
+[LIB] 
+        UpDate: 
+		RtlLIB(Win7/Vista): V700.1058.0824.2010 (By Vincent)
+
+########################################################
+InstallShield V1.00.0170  (2010/09/02)   
+
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1626.0902.2010 (By Karl)
+
+[LIB] 
+        UpDate: 
+		RtlLIB(Win7/Vista): V700.1059.0902.2010 (By Karl)
+		RtlIhvOid(Win7/Vista): V1.1015.0826.2010 (By Karl)
+
+########################################################
+InstallShield V1.00.0171  (2010/09/08)   
+
+[InstallShield] 
+        Add:
+               implementation Concurrent Mode (VWiFi) for WinXP (By Karl)
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1626.0902.2010 (By Karl)
+
+        ADD:
+                VLanControl : V1.1001.618.2010 (By Karl)
+
+[LIB] 
+        UpDate: 
+		RtlLIB(WinXP/2003): V700.1059.0902.2010 (By Karl)
+        ADD:
+		VLanAPI : V1.1001.0811.2010 (By Karl)
+
+########################################################
+InstallShield V1.00.0172  (2010/09/23)   
+
+[InstallShield] 
+        Add:
+                Implementation install selected suspend driver function
+	Update :
+                SetVistaDrv : 1.0.0.21 (By Jacken)
+		SetVistaDrv64 : 1.0.0.21 (By Jacken)
+		SetDrv : 400.1199.0913.2010 (By Jacken)
+		SetDrv64 : 400.1199.0913.2010 (By Jacken)
+
+[UI] 
+	UpDate:              
+		RtlLIB(WinXP/2003): V500.1366.0923.2010 (By HPFan)
+		RtlLIB(Win7/Vista): V700.1060.0921.2010 (By HPFan)
+		RtlDHCP:1.0.0.12 (By Jacken)	
+########################################################
+InstallShield V1.00.0173  (2010/09/30)   
+
+[InstallShield] 
+        Add:
+                Implementation install selected suspend driver function
+	Update :
+                SetVistaDrv : 1.0.0.22 (By Jacken)
+		SetVistaDrv64 : 1.0.0.22 (By Jacken)
+		ScanAdapter : 1.0.0.2(By Jacken)
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1628.0930.2010 (By Karl)
+		RtWlan(Win7/Vista):V700.1628.0930.2010 (By Karl)
+		RtlLIB(WinXP/2003/Win7/Vista): V700.1062.0929.2010 (By Karl)	
+########################################################
+InstallShield V1.00.0174  (2010/10/12)   
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1629.1012.2010 (By Karl)
+		RtWlan(Win7/Vista):V700.1629.1012.2010 (By Karl)
+[LIB]
+        UpDate: 
+                VLanAPI : V1.1002.1004.2010 (By Karl)
+                RtlLIB(Win7/Vista): V700.1063.1012.2010 (By Karl)	
+	
+########################################################
+InstallShield V1.00.0175  (2010/11/10)   
+
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1064.1110.2010 (By Karl)	
+	
+########################################################
+InstallShield V1.00.0176  (2010/11/23)   
+
+[InstallShield] 
+        Add:
+                Implementation install selected suspend driver function
+	Update :
+                SetVistaDrv : 1.0.0.24 (By Jacken)
+		SetVistaDrv64 : 1.0.0.24 (By Jacken)	
+	
+########################################################
+InstallShield V1.00.0177  (2010/12/07)   
+
+[InstallShield] 
+        Add:
+                Implementation install selected suspend driver function
+	Update :
+                SetVistaDrv : 1.0.0.25 (By Jacken)
+		SetVistaDrv64 : 1.0.0.25 (By Jacken)	
+		SetDrv : 400.1201.1207.2010 (By Jacken)
+		SetDrv64 : 400.1201.1207.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0178  (2010/12/30)   
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1630.1221.2010 (By Karl)
+		RtWlan(Win7/Vista):V700.1630.1228.2010 (By Karl)
+	
+[LIB]
+        UpDate: 
+                VLanAPI : V1.1005.1221.2010 (By Karl)
+
+[InstallShield] 
+        Add:
+                Implementation install selected suspend driver function
+	Update :
+                SetVistaDrv : 1.0.0.28 (By Jacken)
+		SetVistaDrv64 : 1.0.0.28 (By Jacken)	
+		SetDrv : 400.1202.1229.2010 (By Jacken)
+		SetDrv64 : 400.1202.1229.2010 (By Jacken)
+########################################################
+InstallShield V1.00.0179  (2011/1/7)   
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1631.107.2011 (By Karl)
+		RtWlan(Win7/Vista):V700.1631.107.2011 (By Karl)
+	
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1066.1208.2010  
+
+########################################################
+InstallShield V1.00.0180  (2011/4/11)   
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1634.0408.2011 (By Jacken)
+		RtWlan(Win7/Vista):V700.1634.0408.2011 (By Jacken)
+	
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1069.0407.2011 (By Vincent)  
+		RtlIhvOid(Win7/Vista): V1.1016.331.2011 (By Vincent)
+
+########################################################
+InstallShield V1.00.0181  (2011/6/15)   
+
+[InstallShield] 
+	Update :
+		Fixed after x64 install show media dialog issue.
+
+########################################################
+InstallShield V1.00.0182  (2011/7/17)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1637.0717.2011 (By Jacken)
+		RtWlan(Win7/Vista):V700.1637.0717.2011 (By Jacken)
+
+########################################################
+InstallShield V1.00.0183  (2011/8/23)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1639.0822.2011 (By Jacken)
+		RtWlan(Win7/Vista):V700.1639.0822.2011 (By Jacken)
+
+[LIB]
+   UpDate: 
+    RtlLIB(Win7/Vista): V700.1078.0817.2011 (By Jacken)  
+		RtlIhvOid(Win7/Vista): V1.1017.0712.2011 (By Jacken)
+		P2PLib:V1.0.0.1 (By Jacken) 
+		RtlICS : v700.1001.823.2011 (By Jacken)
+########################################################
+InstallShield V1.00.0184  (2011/10/11)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1641.1011.2011 (By Jacken)
+		RtWlan(Win7/Vista):V700.1641.1011.2011 (By Jacken)
+
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1079.1006.2011 (By Jacken)  
+		P2PLib:V0.96.0930.2011 (By Jacken) 
+		RtlICS : v600.1005.1004.2011 (By Jacken)
+
+[InstallShield] 
+        Add:
+                Implementation Win8 intall driver function.
+                Implementation intall BT function.
+########################################################
+
+InstallShield V1.00.0185  (2011/12/22)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1644.1223.2011 (By Jacken)
+		RtWlan(Win7/Vista):V700.1644.1223.2011 (By Jacken)
+
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V700.1079.1129.2011 (By HP)  
+
+[InstallShield] 
+        Update:
+                Modify BT function.
+########################################################
+InstallShield V1.00.0186  (2012/01/15)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1645.0115.2012 (By Jacken)
+		RtWlan(Win7/Vista):V700.1645.0115.2012 (By Jacken)
+
+[LIB]
+        UpDate: 
+                RtlLIB(Win7/Vista): V500.1082.0115.2012 (By Jacken)  
+
+[InstallShield] 
+        Update:
+                Modify BT function.
+########################################################
+InstallShield V1.00.0187  (2012/02/21)  
+
+[UI] 
+	UpDate:              
+		RtWlan(WinXP/2003):V700.1646.0215.2012 (By Jacken)
+		RtWlan(Win7/Vista):V700.1646.0215.2012 (By Jacken)
+		RtlDHCP : V1.0.0.14
+
+[LIB]
+        UpDate: 
+		RtlLIB(WinXP/2003): V500.1370.0221.2012 (By Jacken)  
+
+[InstallShield] 
+        Update:
+                Modify Win8 function.
+########################################################
+InstallShield V1.00.0188  (2012/04/30)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1647.0430.2012 (By Karl)
+
+
+########################################################
+InstallShield V1.00.0189  (2012/05/03)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1648.0503.2012 (By Vincent)  
+
+[LIB]
+        UpDate: RtlIhvOid(Win7/Vista): V1.1019.503.2012 (By Vincent) 
+
+########################################################
+InstallShield V1.00.0190  (2012/05/03)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1647.0430.2012 (By Karl)
+
+########################################################
+InstallShield V1.00.0191  (2012/05/17)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1650.0517.2012 (By Jacken)
+
+[InstallShield] 
+        Update:
+                Part WLAN+BT , WLAN Only , BT Only 
+########################################################
+InstallShield V1.00.0192  (2012/06/21)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1651.0619.2012 (By Jacken)
+	        RtlLib(Win7/Vista):V700.1084.0619.2012 (By Jacken)
+
+[InstallShield] 
+        Update:
+                Modify Script.
+########################################################
+InstallShield V1.00.0193  (2012/08/14)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1654.0814.2012 (By Jacken)
+		RtWlan(XP):V700.1654.0814.2012 (By Jacken)
+	        RtlLib(Win7/Vista):V700.1085.0703.2012 (By Jacken)
+		P2PLib:V0.93.808.2012
+########################################################
+InstallShield V1.00.0195  (2012/09/18)  
+
+[UI] 
+	UpDate:              
+		RtWlan(Win7/Vista):V700.1657.0918.2012 (By Jacken)
+	        RtlLib(Win7/Vista):V700.1088.0912.2012 (By Jacken)
+		EnumDevLib(Win7/Vista):V700.1035.828.2012 (By Jacken)
+		RtlIhvOid(Win7/Vista):V1.1023.918.2012 (By Jacken)
+########################################################
+InstallShield V1.00.0196  (2012/10/03)  
+
+[UI] 
+	UpDate:
+	        RtlLib(Win7/Vista):V500.1372.1003.2012 (By HP)
+########################################################
+InstallShield V1.00.0197  (2012/10/12)  
+
+[UI] 
+	UpDate:
+	        Re-Build version :
+		RtlIhvOid(Win7/Vista):V1.1023.918.2012 (By Jacken)
+########################################################
+InstallShield V1.00.0198  (2012/10/23)  
+
+[UI] 
+	UpDate:
+	        RtWlan(Win7/Vista):V700.1658.1023.2012 (By Jacken)
+########################################################
+InstallShield V1.00.0199  (2012/11/07)  
+
+[UI] 
+	UpDate:
+	        RtWlan(Win7/Vista):V700.1659.1106.2012 (By Jacken)
+	        RtlLib(Win7/Vista):V700.1090.1106.2012 (By Jacken)
+		      EnumDevLib(Win7/Vista):V700.103.1106.2012 (By Jacken)
+		      SetDrv : 400.1205.1105.2012 (By Jacken)
+		      SetDrv64 : 400.1205.1105.2012 (By Jacken)
+		      SetVistaDrv : 1.0.0.31 (By Jacken)
+		      SetVistaDrv64 : 1.0.0.32 (By Jacken)
+
+[InstallShield] 
+        Update:
+                Modify to support all-in-one driver install.
+########################################################
+InstallShield V1.00.0200  (2012/11/22)  
+
+[UI] 
+	UpDate:
+	        RtlLib(Win7/Vista):V700.1092.1121.2012 (By HP)
+########################################################
+InstallShield V1.00.0201  (2012/11/27)  
+
+[UI] 
+	UpDate:
+	        RtWlan(Win7/Vista):V700.1660.1127.2012 (By Jacken)
+		RtWlan(XP/2003):V700.1660.1127.2012 (By Jacken)
+
+[InstallShield] 
+        Update:
+                Modify to Multi-Language error issue. 
+########################################################
+InstallShield V1.00.0202  (2012/12/14)  
+
+[UI] 
+	UpDate:
+		SWUSB.exe : V500.1004.1214.2012
+
+[InstallShield] 
+        Update:
+                1.Modify Scanadapter can't detect PCIE card issue. 
+                2.Modify swUSB.exe be removed issue.
+########################################################
+InstallShield V1.00.0203  (2013/01/14)  
+
+[UI] 
+	UpDate:
+		SWUSB.exe : V500.1006.0114.2013
+	  RtWlan(Win7/Vista):V700.1662.0111.2013 (By Jacken)
+		RtWlan(XP/2003):V700.1662.0111.2013 (By Jacken)
+ 		RtlIhvOid(Win7/Vista) : V1.1025.103.2013
+		RtlLib(Win7/Vista)¡GV700.1093.1226.2012	
+		RtlDHCP¡GV1.0.0.15	
+
+[InstallShield] 
+        Update:
+                1.Always install/Uninstall switch USB function.
+########################################################
+InstallShield V1.01.0203  (2013/01/16)  
+
+[UI] 
+	UpDate:
+		SW_USB.exe : V500.1007.0115.2013
+########################################################
+InstallShield V1.03.0204  (2013/01/31)  
+
+[UI] 
+	UpDate:
+		SwUSB.exe : V500.1012.0130.2013 (By Karl)
+                       RtlIhvOid(Win7/Vista) : V1.1026.123.2013 (By Karl)
+
+                       ScanAdapter.exe V1.0.0.4 (By Jacken)
+########################################################
+InstallShield V1.00.0205  (2013/02/05)  
+
+[UI] 
+	UpDate:
+                        RtlIhvOid(Win7/Vista) : V1.1027.205.2013 (By Karl)
+
+########################################################
+InstallShield V1.00.0206  (2013/02/07)  
+
+[InstallShield] 
+	Add:
+                      support install power table (By Karl)
+
+########################################################
+InstallShield V1.00.0207  (2013/02/20)  
+
+[UI] 
+	UpDate:
+		RtlLib(Win7/Vista)¡GV700.1095.220.2013 (By HPFan)
+	
+########################################################
+InstallShield V1.00.0208  (2013/02/26)  
+
+[InstallShield] 
+        Update:
+   	SetVistaDrv : 1.0.0.33 (By Karl)
+	 SetVistaDrv64 : 1.0.0.33 (By Karl)
+	Modify for Uninstall Driver issue. 
+########################################################
+InstallShield V1.00.0208  (2013/03/11)  
+
+[InstallShield] 
+        Update:
+	 SetVistaDrv64 : 1.0.0.33 (By Karl)
+	 Modify delete .sys for  install/Uninstall  Driver issue. 
+########################################################
+InstallShield V1.00.0209  (2013/02/27)  
+
+[InstallShield] 
+        Update:
+   		RtWLan.exe(XP/Win7/Vista) : v700.1663.226.2013 (By Vincentc)
+		  RtlLib.dll(Win7/Vista) : v700.1096.226.2013 (By Vincentc)
+		  EnumDevLib.dll(Win7/Vista) : v700.1038.227.2013 (By Vincentc)
+
+########################################################
+InstallShield V1.00.0210  (2013/03/06)  
+
+[InstallShield] 
+        Update:
+   		RtWLan.exe(Win7/Vista) : v700.1664.305.2013 (By Vincentc)
+
+########################################################
+InstallShield V1.00.0210  (2013/03/06)  
+
+[InstallShield] 
+        Update:
+   		RtWLan.exe(Win7/Vista) : v700.1664.305.2013 (By Vincentc)
+
+########################################################
+InstallShield V1.00.0211  (2013/03/18)  
+
+[UI] 
+	UpDate:
+	 RtlIhvOid(Win7/Vista) : 1.1028.318.2013 (By Karl)
+	 Modify add exceptions for U2/U3.
+	 
+	 RtlLib.dll(Win7/Vista) : v700.1097.318.2013 (By Karl)
+	 Fix BSOD for setting Default Gateway
+	 
+	 RtlLIB(WinXP/2003): V500.1373.318.2012 (By Karl) 
+	 
+########################################################
+InstallShield V1.00.0212  (2013/03/22)  
+
+[UI] 
+	UpDate:
+	 RtlIhvOid(Win7/Vista) : 1.1030.320.2013 (By Karl)
+	 Fix because Driver not ready caused Connect profile Fail for Win8.
+   RtWLan.exe(Win7/Vista) : v700.1665.322.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0213  (2013/04/8)  
+
+   
+[InstallShield] 
+   Supporting WLAN+BT installation in Win7. (By Vincentc)
+	 
+########################################################  
+InstallShield V1.00.0215  (2013/04/24)  
+
+[UI] 
+	UpDate:
+	 WPSProt : V1.0.0.2
+	 SwUSB.exe : V500.1013.0329.2013 (By Karl)
+	 Fix because Driver not ready caused Connect profile Fail for Win8.
+	 RtlIhvOid(Win7/Vista) : 1.1030.401.2013 (By Karl)
+   RtlLIB(WinXP/2003): V500.1374.402.2013 (By Karl) 	 
+   RtWLan.exe(Win7/Vista) : v700.1667.422.2013 (By Karl)
+   RtWlan(XP/2003): V700.1657.422.2013 (By Karl)
+   RtlLib.dll(Win7/Vista) : v700.1098.424.2013 (By Karl)
+   
+[Install Driver] 
+   Fixed can't delete Driver .sys file for WinXP
+	Update :
+		SetDrv : 400.1206.402.2013 (By Karl) 
+		SetDrv64 : 400.1206.402.2013 (By Karl) 
+	 
+########################################################
+InstallShield V1.00.0216  (2013/04/30)  
+
+[InstallShield] 
+   Support show U2/U3 Message. (By Karl)
+   
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1015.0430.2013 (By Karl)
+   
+########################################################
+InstallShield V1.00.0217  (2013/05/03)  
+ 
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1016.0502.2013 (By Karl)
+   
+########################################################
+InstallShield V1.00.0218  (2013/05/09)  
+ 
+[UI] 
+	UpDate:
+	 RtlIhvOid(Win7/Vista) : 1.1031.508.2013 (By Karl)
+	 RtWLan.exe(Win7/Vista) : v700.1668.508.2013 (By Karl)
+	 RtlLib.dll(Win7/Vista) : v700.1099.509.2013 (By Karl)
+   
+########################################################
+InstallShield V1.00.0219  (2013/05/13)  
+ 
+[UI] 
+	UpDate:
+	 RtWLan.exe(Win7/Vista) : v700.1669.513.2013 (By Karl)
+	 runsw.exe : V1.1003.514.2013 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0220  (2013/05/16)  
+ 
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1017.0516.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0221  (2013/05/23)  
+ 
+[Script Files] 
+	 1.Add Support install Driver for Win8.1 OS. (By Karl)
+	 2.Fix BUG for Uninstall BT .
+	 
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1018.0523.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0222  (2013/06/25)  
+ 
+[UI] 
+	UpDate:
+	 RtlIhvOid(Win7/Vista) : 1.1032.625.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0223  (2013/07/05)  
+ 
+[UI] 
+	UpDate:
+	 RtWLan.exe(Win7/Vista) : v700.1670.703.2013 (By Karl)
+	 RtlLib.dll(Win7/Vista) : v700.1100.703.2013 (By Karl)
+	 RtlIhvOid(Win7/Vista) : 1.1033.0704.2013 (By Karl)
+	 SwUSB.exe : V500.1019.0705.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0224  (2013/07/18)  
+ 
+[Script Files] 
+	UpDate:
+	 Fix Win8.1 driver uninstall issue.(By Karl)
+	 
+########################################################
+InstallShield V1.00.0225  (2013/08/02)  
+ 
+[Script Files] 
+	UpDate:
+	 Fix Create RTK_HWID.dat issue.(By Karl)
+	 
+[UI] 
+	UpDate:
+	 RtlIhvOid(Win7/Vista) : 1.1034.0722.2013 (By Karl)	 
+	 
+########################################################
+InstallShield V1.00.0226  (2013/08/19)  
+
+[UI] 
+	UpDate:
+   RtlLib.dll(Win7/Vista) : v700.1101.809.2013 (By Karl)  	
+   RtlLIB(WinXP/2003): V500.1376.812.2013 (By Karl) 	
+   RtWlan(XP/2003): V700.1658.813.2013 (By Karl)   
+   RtWLan.exe(Win7/Vista) : v700.1671.819.2013 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0227  (2013/08/29)  
+ 
+[Script Files] 
+	UpDate:
+	 Fix Uninstall Driver only issue for Win8.1 OS.(By Karl)
+	 
+########################################################
+InstallShield V1.00.0229  (2013/09/10)  
+ 
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1020.0910.2013 (By Karl)
+	 Fix blue screen flash for Connection attempt fail(Win8 os).
+	 
+########################################################
+InstallShield V1.00.0230  (2013/09/24)  
+ 
+[Script Files] 
+	UpDate:
+	 Fix find device issue for WinXP OS UI.(By Karl) 
+[UI] 
+	UpDate:
+	 SwUSB.exe : V500.1021.0923.2013 (By Karl)
+	 
+########################################################
+InstallShield V1.00.0231  (2013/10/07)  
+ 
+[Script Files] 
+	UpDate:
+	 add UpDate EFuse.(By Karl) 
+	 
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): V700.1659.1007.2013 (By Karl)   	 
+
+########################################################
+InstallShield V1.00.0232  (2013/10/18)  
+
+[UI] 
+	UpDate:
+   runsw.exe : V1.1004.1016.2013 (By Karl)  
+   		Fix memory leakage.
+   SwUSB.exe : V500.1022.1017.2013 (By Karl)	
+   RtlLIB(WinXP/2003): V500.1377.1018.2013 (By Karl) 	
+   RtWlan(XP/2003): V700.1660.1018.2013 (By Karl)   
+
+########################################################
+InstallShield V1.00.0233  (2013/10/24)  
+
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): v700.1672.1024.2013 (By Karl)   
+   RtWLan.exe(Win7/Vista) : v700.1672.1024.2013 (By Karl)
+
+########################################################
+InstallShield V1.00.0234  (2013/11/14)  
+
+[UI] 
+	UpDate:
+   RtlLIB(WinXP/2003): V500.1378.1114.2013 (By Karl) 	
+                       Fix a Memory Access Violation at WPS.
+   
+   SwUSB.exe : V500.1023.1113.2013 (By Karl)
+              Prevent BSOD at Win8.1os, remove Set OID_RT_UMR_SET_USB_HOST_CAPABILITY oid.
+
+########################################################
+InstallShield V1.00.0235  (2013/11/22)  
+
+[UI] 
+	UpDate:
+   RtlLib.dll(Win7/Vista) : v700.1103.1121.2013 (By Karl)  
+                            Fix SoftAP crash on S3/S4.
+                            
+   RtlIhvOid(Win7/Vista) : V1.1035.1121.2013 (By Karl)	 
+                           1.Fix crash on S3/S4.
+                           2.remove Set OID_RT_UMR_SET_USB_HOST_CAPABILITY OID.
+                           
+   SwUSB.exe : V500.1024.1122.2013 (By Karl)
+########################################################
+InstallShield V1.00.0236  (2013/12/06)  
+
+[UI] 
+	UpDate:
+   1.Add RT_Check_RtlDHCP_Port_Work() API ,Support check DHCP port control by RtlDHCP.
+   2.Modify RT_SetSoftAP_TcpIpAddress() function.	(about PPPOE BUG)
+   RtlLib.dll(Win7/Vista) : v700.1104.1205.2013 (By Karl)  	
+   RtlLIB(WinXP/2003): V500.1379.1205.2013 (By Karl) 	
+   
+   RtWlan(XP/2003): V700.1673.1206.2013 (By Karl)   
+   RtWLan.exe(Win7/Vista) : v700.1673.1206.2013 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0237  (2013/12/12)  
+
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): V700.1674.1212.2013 (By Karl)   
+   RtWLan.exe(Win7/Vista) : v700.1674.1212.2013 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0238  (2013/12/24)  
+
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): V700.1675.1224.2013 (By Karl)   
+   RtWLan.exe(Win7/Vista) : v700.1675.1224.2013 (By Karl)
+   
+   RtlDHCP.exe :V3.6.708.2013 (By BruceChung)
+ 
+########################################################
+InstallShield V1.00.0239  (2014/1/2)  
+
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): V700.1676.102.2014 (By Karl)   
+   RtWLan.exe(Win7/Vista) : V700.1676.102.2014 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0240  (2014/1/23)  
+  Supports the use of different .inf & .sys names on XP/Vista OS.
+[UI] 
+	UpDate:
+   RtWlan(XP/2003): V700.1677.122.2014 (By Karl)   
+   RtWLan.exe(Win7/Vista) : V700.1677.122.2014 (By Karl)
+ 
+########################################################
+InstallShield V1.00.0241  (2014/3/25)  
+[UI] 
+	UpDate:
+   RtlIhvOid(Win7/Vista) : V1.1036.0227.2014 (By Karl)	 
+                           Fix crash on Connect profile Process.  	
+   SwUSB.exe : V500.1025.324.2013 (By Karl)                        
+########################################################
+InstallShield V1.00.0242  (2014/4/10)  
+[InstallShield]
+	Update:	 
+	1.Fixed find .inf & .sys names on XP/Vista OS.	
+	2.Fixed Uninstall Driver BUG for X64 OS.	 
+########################################################  
+InstallShield V1.00.0243  (2014/4/21)  
+[UI] 
+	UpDate:
+   runsw.exe : V1.1005.415.2014 (By Karl)	 
+########################################################
+InstallShield V1.01.0243  (2014/7/3)  
+[InstallShield] 
+        Update:
+        Modify driver install for WinXP,Fix crash on Connect profile Process.(By Karl)
+        Fix "delete Driver .sys while uninstallation for X64"
+########################################################    
+InstallShield V1.00.0244  (2014/10/9)  
+[UI] 
+   UpDate:
+   RtlDHCP.exe :V3.7.423.2014 (By Vincentc)
+   RtlLIB(WinXP/2003): V500.1381.917.2013 (By Karl) 	
+   RtlIhvOid(Win7/Vista) : V1.1037.1006.2014 (By Karl)	 
+   RtlLib.dll(Win7/Vista) : v700.1108.1007.2014 (By Karl)  
+   RtWLan.exe(Win7/Vista) : v700.1679.1009.2014 (By Karl)
+    
+######################################################## 
+InstallShield V1.00.0245  (2014/10/15)  
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista) : v700.1679.1015.2014 (By Karl)
+    
+######################################################## 
+InstallShield V1.00.0246  (2014/10/29)  
+[InstallShield] 
+Update:
+    SwUSB.exe : V500.1026.1028.2014 (By Karl)     
+    Restore to Set OID_RT_UMR_SET_USB_HOST_CAPABILITY OID to Driver.
+########################################################
+InstallShield V1.00.0247  (2014/11/11)  
+[InstallShield]  
+    Modify no card is installed on WinXP.
+########################################################
+InstallShield V1.00.0248  (2014/12/3)  
+[UI] 
+   UpDate:
+   RtlLIB(WinXP/2003): V500.1383.1202.2013 (By Karl) 	
+   RtlLib.dll(Win7/Vista) : v700.1111.1028.2014 (By lena_yang)  
+   RtWLan.exe(Win7/Vista) : v700.1683.1125.2014 (By Karl)
+[InstallShield]  
+    Modify Uninstall .
+    
+######################################################## 
+InstallShield V1.00.0249  (2014/12/4)  
+[UI] 
+   Use the old version DLL
+   RtlLib.dll(Win7/Vista) : v700.1108.1007.2014 (By Karl) 
+
+######################################################## 
+InstallShield V1.00.0250  (2014/12/9)  
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista) : v700.1685.1208.2014 (By Karl)
+[InstallShield]  
+    Add OnCancel Process.
+######################################################## 
+InstallShield V1.00.0251  (2014/12/15)  
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista) : v700.1685.1211.2014 (By Karl)
+   SwUSB (XP_Win8) : v500.1027.1212.2014 (By Karl)
+   Fix about Driver 0x139f
+[InstallShield]  
+    Remove language parameter in UNINSTALLKEY. (By Karl)
+######################################################## 
+InstallShield V1.00.0252  (2014/12/17)  
+[InstallShield]  
+    Delete Launch UnIsPatch.exe. (By Karl)
+######################################################## 
+InstallShield V1.00.0253  (2014/12/18)  
+[InstallShield]  
+    Modify check Run As Administrator on WinXP. (By Karl)
+######################################################## 
+InstallShield V1.00.0254  (2014/12/24)  
+[InstallShield]  
+	UpDate:
+	ScanAdapter.exe V1.0.0.10 (By Karl)
+    Modify Scan Adapter Hardware ,older versions can not support more than a length greater than 17 BYTE Hardware ID. (By Karl)
+######################################################## 
+InstallShield V1.00.0255  (2014/12/25)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1681.1225.2014 (By Karl) 	
+   RtlLib.dll(WinXP/2003) : V500.1386.1225.2014 (By Karl)  
+######################################################## 
+InstallShield V1.00.0256  (2014/12/29)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1686.1229.2014 (By Karl) 	
+   RtWLan.exe(Win7/Vista): V700.1686.1229.2014 (By Karl)
+######################################################## 
+InstallShield V1.00.0257  (2015/01/07)  
+[UI] 
+   UpDate:
+   RtlICS : v600.1010.107.2015 (By Karl)
+######################################################## 
+InstallShield V1.00.0258  (2015/01/09)  
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista): V700.1687.108.2015 (By Karl) 
+######################################################## 	
+InstallShield V1.00.0259  (2015/01/16)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1687.114.2015 (By Karl) 
+   RtlLib.dll(WinXP/2003) : V500.1387.115.2015 (By Karl)  
+   RtlLib.dll(Win7/Vista) : V700.1113.116.2015 (By Karl)
+######################################################## 
+InstallShield V1.00.0260  (2015/02/02)  
+[InstallShield]  
+   Make support Win10 OS.(By Karl) 
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista): V700.1688.129.2015 (By Karl) 
+   RtlICS : v600.1011.129.2015 (By Karl)
+######################################################## 
+InstallShield V1.00.0261  (2015/02/05)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1688.205.2015 (By Karl) 
+   RtWLan.exe(Win7/Vista): V700.1688.205.2015 (By Karl) 
+   RtlICS : V600.1012.205.2015 (By Karl)
+######################################################## 
+InstallShield V1.00.0262  (2015/03/03)  
+[UI] 
+   UpDate:
+   SwUSB (XP_Win8) : V500.1028.303.2015 (By Karl)
+   Modify Set OID_RT_UMR_SET_USB_HOST_CAPABILITY OID to Driver.
+######################################################## 
+InstallShield V1.00.0263  (2015/03/19)  
+[UI] 
+   UpDate:
+   RtWLan.exe(Win7/Vista): V700.1689.319.2015 (By Karl) 
+######################################################## 	
+InstallShield V1.00.0264  (2015/03/24)  
+[InstallShield]  
+   Install:Compare versions support only install newer SwUSB.(By Karl) 
+   Uninstall:In order not to affect other customized USB device installed on the USB mode switch will not remove SwUSB.
+######################################################## 
+InstallShield V1.00.0265  (2015/03/26)  
+[UI] 
+   UpDate:
+   RtlLib.dll(WinXP/2003) : V500.1388.326.2015 (By Karl)  
+   	Fixes crash in a long time test.
+   RtlLib.dll(Win7/Vista) : V700.1114.326.2015 (By Karl)
+	Fix RT_Check_Current_NIC_IPAddress return Fail on some platforms.
+######################################################## 	
+InstallShield V1.00.0266  (2015/03/27)  
+[UI] 
+   UpDate:
+   SwUSB (XP_Win8) : V500.1029.327.2015 (By Karl)
+   Modify Memory leak on GetHUB_Type. 
+######################################################## 
+InstallShield V1.00.0266  (2015/03/30)  
+[UI] 
+   UpDate:
+   RtlIhvOid(Win7/Vista) : V500.1388.330.2015 (By Karl)  
+   RtlLib.dll(WinXP/2003) : V500.1389.330.2015 (By Karl)
+   Modify Memory leak on GetHUB_Type. 
+######################################################## 
+InstallShield V1.00.0267  (2015/04/30)  
+[UI] 
+   UpDate:
+   SwUSB (XP_Win8) : V500.1031.430.2015 (By Karl)
+   1. Revised WinXP remove OID_RT_QUERY_USB_MODE_RESET_CONFIRM duplicate switching happen.
+    2. Repair in Vista system GUID string error issue.
+######################################################## 
+InstallShield V1.00.0267  (2015/05/18)  
+[UI] 
+   UpDate:
+   SwUSB (XP_Win8) : V500.1031.515.2015 (By Karl)
+   1. Modify the Switch USB2.0/USB3.0 wait to reconnect TimeOut time from two seconds to change four seconds.
+######################################################## 
+InstallShield V1.00.0268  (2015/6/11)  
+[InstallShield]  
+   UpDate:
+	ScanAdapter.exe V1.0.0.11 (By Karl)
+        Modify Search hardware ID on comparative issues exist when REV.
+######################################################## 
+InstallShield V1.00.0269  (2015/6/23)  
+[InstallShield]  
+   UpDate:
+	SetVistaDrv : 1.0.0.35 (By Karl)
+	SetVistaDrv64 : 1.0.0.35 (By Karl)
+	Modify Uninstall removes the binary files.
+######################################################## 
+InstallShield V1.00.0269  (2015/6/26)  
+[UI] 
+   UpDate:
+   RtlLib.dll(Win7/Vista) : V700.1115.625.2015 (By Karl)
+	Cannot Scan the AP on Win10 OS.
+######################################################## 
+InstallShield V1.00.0270  (2015/7/16)  
+[Script Files] 
+   UpDate:
+	 Fix SetDrv(for WinXP) hardware ID on comparative issues exist when "USB\" or "PCI\".(By Karl) 
+######################################################## 
+InstallShield V1.00.0271  (2015/7/30)  
+[Script Files] 
+   UpDate:
+	 Fix Install Custermize ID issue.(By Karl) 
+######################################################## 
+InstallShield V1.00.0272  (2015/8/7)  
+[Script Files] 
+   UpDate:
+	 Fix Uninstall package will delete rtwlanu(usb) inbox driver rtwlanu.sys on Win10.(By Karl) 
+######################################################## 
+InstallShield V1.00.0273  (2015/8/13)  
+[UI] 
+   UpDate:	
+   RtlIhvOid(Win7/Vista) : V1.1039.812.2015 (By Karl)	 
+   RtWLan.exe(Win7/Vista) : V700.1690.812.2015 (By Karl)
+######################################################## 
+InstallShield V1.00.0274  (2015/8/20)  
+[Script Files] 
+   UpDate:
+	 Increase processing installation removed Native 802.11 IHV Extensions.(By Karl) 
+   Config in IsConfig.ini:
+	[Install]
+	Install_IHV_Extensions=1 ;Installation Native 802.11 IHV Extensions When an external directory "IHV" exists in the Package.
+	Uinstall_IHV_Extensions=1 ;Removed Native 802.11 IHV Extensions when uninstalling.
+
+[UI] 
+   UpDate:	
+   RtWLan.exe(Win7/Vista) : V700.1691.819.2015 (By Karl)
+   RtlIhvOid(Win7/Vista) : V1.1040.820.2015 (By Karl)	 
+######################################################## 
+InstallShield V1.00.0275  (2015/9/8)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1689.904.2015 (By Karl) 
+   RtWLan.exe(Win7/Vista) : V700.1692.908.2015 (By Karl)	
+   RtlLib.dll(WinXP/2003) : V500.1390.904.2015 (By Karl)  
+   RtlLib.dll(Win7/Vista) : V700.1116.907.2015 (By Karl)
+   RtlICS.dll : V600.1013.908.2015 (By Karl)
+
+######################################################## 
+InstallShield V1.00.0276  (2015/9/10)  
+[UI] 
+   UpDate:
+   RtWLan.exe(WinXP/2003): V700.1690.909.2015 (By Karl) 
+
+######################################################## 
+InstallShield V1.00.0277  (2015/9/22)  
+[Script Files] 
+   UpDate:
+	 Add need to detect the card before installation.(By Karl) 
+   Config in IsConfig.ini:
+	[Install]
+	NeedDetectWLAN=1  //if 1 need to detect the card before installation.
+
+[ISLangUni.ini] 
+   UpDate:
+	 Add Msg_HW_Detect String.(By Karl) 
+
+[UI] 
+   UpDate:
+   	RtWLan.exe(Win7/Vista) : V700.1693.922.2015 (By Karl)	
+
+######################################################## 
+InstallShield V1.00.0278  (2015/10/06)  
+[Script Files] 
+   UpDate:
+	 1.Fix cannot uninstall successfully after performing Win10 SysPrep. (By Karl)
+         2.Fix "Cisco modules installation issue". (By Vincentc)
+
+######################################################## 
+InstallShield V1.00.0279  (2015/10/16)  
+[Script Files] 
+   UpDate:
+	 1.Fix Detect WLAN on WinXP(about .inf name). (By Karl)
+[UI] 
+   UpDate:
+   	RtlLib.dll(Win7/Vista) : V700.1117.1012.2015 (By hpfan)
+  	Modify WPS IE check condition. If there are two WPS IE, choose IE with longer length.
+
+
+######################################################## 
+InstallShield V1.00.0280  (2015/10/29)  
+[Script Files] 
+   UpDate:
+	 1.Fix Silent Uninstall issue. (By Karl)
+
+
+######################################################## 
+InstallShield V1.00.0281  (2015/11/30)  
+[Script Files] 
+   UpDate:
+	 1.Fix wrong path variable issue.(By Vincentc)
+
+[UI] 
+   UpDate:
+   	RtWLan.exe: V700.1694.1130.2015 (By Karl)	
+
+
+######################################################## 
+InstallShield V1.00.0282  (2015/12/09)  
+[Script Files] 
+   UpDate:
+	 1.Fix After uninstalling PCIE packet inbox driver will not re-copy .sys on Win10 TH2 only.(By Karl) 
+
+
+######################################################## 
+InstallShield V1.00.0283  (2015/12/25)  
+[UI] 
+   UpDate:
+         RtlLib.dll(Win7/Vista) : V700.1118.1224.2015 (By Karl)
+	 Fixed Wireless Mode AP show unknown mode problem when Sitesurvey is 802_11AC AP, only after Win8.1 OS. 
+
+
+######################################################## 
+InstallShield V1.00.0284  (2016/02/26)  
+[Script Files] 
+   UpDate:
+	 1. Add support 2nd Driver-folder to install other drivers set. (By Vincentc)
+
+
+######################################################## 
+InstallShield V1.00.0285  (2016/03/16)  
+[Script Files] 
+   UpDate:
+	 1. Fix Show error message when uninstall package. (By Karl)
+
+
+######################################################## 
+InstallShield V1.00.0286  (2016/03/30)  
+[UI] 
+   UpDate:	
+   	RtlIhvOid(Win7/Vista) : V1.1041.330.2016 (By Karl)	
+   	Modify the query OID returns 0x6 Error Handling.
+
+
+######################################################## 
+InstallShield UI V1.00.0287  (2016/05/03)  
+[UI] 
+   UpDate:	
+   	RtlIhvOid(Win7/Vista) : V1.1042.503.2016 (By Karl_Hsu)	
+   	RtlLib.dll(WinXP/2003) : V500.1390.904.2015 (By Karl_Hsu)  
+   	Modify use query USB mode OID.
+[Script Files] 
+   	Modify become only the UI Package (Remove install Driver)
+
+
+######################################################## 

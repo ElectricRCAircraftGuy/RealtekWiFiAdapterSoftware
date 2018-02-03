@@ -1,0 +1,65 @@
+;-------------------------------------------------------------------------
+; XPTWOPORT_MP.INF -- Virtual Miniport for RTL8192C VLAN
+;
+; Copyright (C) 2010 Realtek Semiconductor Corporation
+;-------------------------------------------------------------------------
+
+[Version]
+Signature = "$Windows NT$"
+Class = Net
+ClassGUID = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider = %Realtek%
+DriverVer = 09/28/2010, 1.00.0928.2010
+CatalogFile.NT	= XPTWOPORT.cat
+
+[ControlFlags]
+ExcludeFromSelect = RTL_TWOPORT_MP	
+
+[Manufacturer]
+%Realtek% = Realtek,NTx86,NTamd64
+
+[Realtek.NTx86]
+%RTL_DESC% = XPTWOPORTMP.ndi, RTL_TWOPORT_MP
+
+[Realtek.NTamd64]
+%RTL_DESC% = XPTWOPORTMP.ndi, RTL_TWOPORT_MP
+
+[XPTWOPORTMP.ndi]
+AddReg  = XPTWOPORTMP.ndi.AddReg
+Characteristics = 0x81 ; NCF_HAS_UI  | NCF_VIRTUAL | NCF_HIDDEN
+*IfType = 71     ; IF_TYPE_IEEE80211
+*MediaType      = 16    ; NdisMediumNative802_11
+*PhysicalMediaType = 9	; NdisPhysicalMediumNative802_11
+
+[XPTWOPORTMP.ndi.AddReg]
+HKR, Ndi, Service,  0,  "XPTWOPORTMP"
+HKR, Ndi, HelpText, 0,  "%RTL_HELP%"
+HKR, Ndi\Interfaces,    UpperRange, 0,  "ndis5"
+HKR, Ndi\Interfaces,    LowerRange, 0,  "nolower"
+
+HKR, Ndi\params\VWlanID,     ParamDesc,       0, %VWlanID%
+HKR, Ndi\params\VWlanID,     default,         0, "1"
+HKR, Ndi\params\VWlanID,     type,            0, "long"
+HKR, Ndi\params\VWlanID,     min,             0, "1"
+HKR, Ndi\params\VWlanID,     max,             0, "4094"
+HKR, Ndi\params\VWlanID,     step,            0, "1"
+HKR, Ndi\params\VWlanID,     base,            0, "10"
+
+
+[XPTWOPORTMP.ndi.Services]
+AddService = XPTWOPORTMP, 2, XPTWOPORTMP.AddService
+
+[XPTWOPORTMP.AddService]
+DisplayName     = %RTL_DESC%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 3 ;SERVICE_DEMAND_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\XPTWOPORT.SYS
+Description     = %RTL_DESC%
+
+
+[Strings]
+Realtek  = "Realtek"
+RTL_DESC = "Wireless Network Adapter"
+RTL_HELP = "Wireless Network Adapter for VLAN"
+VWlanID   = "VWLAN ID"

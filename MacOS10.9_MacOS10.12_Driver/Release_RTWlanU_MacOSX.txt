@@ -1,0 +1,104 @@
+/*****************************************************************************
+ *	Copyright(c) 2015,  RealTeK Technology Inc. All Right Reserved.
+ *  
+ *	Realtek Wireless LAN USB Driver Release Note. 
+ *	
+ *	Description:	
+ *		VVVV.U.DDDD.YYYY
+ *					
+ *		VVVV	-	Version		-->	1015
+ *		U	-	Sub Version	-->	0
+ *		DDDD	-	Data	10/19	-->	1019
+ *		YYYY	-	Year	2007	-->	2007
+ * 
+ *****************************************************************************/
+
+
+############################################################################
+	Version:		
+	1027.4.02042015
+
+	Reason:
+	1. Modify inf default setting. 
+	2. Enable adaptivity mechanism as auto mode by default.
+	3. Support new install package with more composite device instance in inf.
+	4. Fix double free when run throughput test with Chariot
+	5. Support prefer band mechanism for 2/5G AP link. Revise in inf.
+	6. Improve USB switch mechanism before service save profile to prevent linking to wrong AP.
+	7. Fix system logo bug in sleep and PNP.
+	8. [8812AU] Fix throughput endurance test bug.
+	9. [MacOS] Support 802.1x WEP.
+	10.Indicate DataRate behavior.
+	
+############################################################################		
+	Version:		
+	1829.0.0320.2015	
+	
+	Reason:
+	1. [8814AU] Add new IC support.
+	2. [8814AU] Support 4T4R beamforming.
+	3. Revise link process for IOT issue.
+	4. Revise TX beamform.
+	5. [8814AU] Fix endurance issue.
+	6. [8814AU][Alpha] Fix unexpect WPS trigger issue  
+	7. [8814AU] Improve Tx RA stability 
+
+############################################################################
+
+	1830.1.0720.2015
+
+	Reason:
+	1. Revise RX path hander to prevent multiple clients stuck.
+	2. [8814AU] Improve TX performance for field try.
+	3. [8814AU] Fix WPS GPIO setting.
+	4. Revise WPS profile save mechanism.
+	5. Support all IC type, except 8192CU 
+
+############################################################################
+
+	1830.2.0904.2015
+	
+	Reason:
+	1. [8188EU] Revise IOT Issue with Atheros AP
+	2. [8192EU] Fix wake up hang when RF is on.
+	3. Modify the communication mechanism between user/kernel levels.
+	4. [8814A] FIX VHT 1SS MCS 8, 9
+	5. [MacOS] Support 802.1x WEP.
+	6. Indicate DataRate behavior.
+	7. [8723BU] revise .plist about interface index.
+	8. Add debug message.
+	9. [8814AU] Customization for specific ID. 
+	10. [8723BU] Fix 10.11 OS restart then Tx stuck.
+	11. [8814AU] Customization for specific ID (Revision).
+	12. Fix system crash issue when hot-plug.
+	13. Fix system crash that indicate media status within acquire lock.
+
+
+############################################################################
+
+	1830.10.0722.2015
+	
+	Reason:
+	1. [MacOS] Support 8822BU.
+	2. [MacOS] Sync default setting of Windows to fix 8812BU 2G connection issue.
+	3. [8723BU] Fix 10.11 OS restart then Tx stuck.
+	4. [8811AU] Fix Led behavior.
+	5. [8192EU] Fix system crash issue when sending zero byte.
+	6. [8811AU] Fix system crash with wrong efuse value.
+
+############################################################################
+
+	1830.15.1219.2016
+	
+	Reason:
+	1. [MacOS] Support 8811CU.
+	2. [MacOS] LED behavior customization.
+	3. [8192EU] Fix system crash issue when sending zero byte.
+	4. [8812BU] Customization for specific ID.
+
+############################################################################
+
+	1830.20.0509.2017
+	
+	Reason:
+	1. [MacOS] Support 8188GU.

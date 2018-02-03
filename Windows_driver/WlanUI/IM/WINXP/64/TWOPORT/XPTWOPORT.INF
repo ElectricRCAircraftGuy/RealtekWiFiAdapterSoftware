@@ -1,0 +1,91 @@
+;-------------------------------------------------------------------------
+;-------------------------------------------------------------------------
+; XPTWOPORT.INF -- Intermediate Driver for RTL8192C VLAN
+;
+; Copyright (C) 2010 Realtek Semiconductor Corporation
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = NetTrans
+ClassGUID   = {4D36E975-E325-11CE-BFC1-08002BE10318}
+Provider    = %Realtek%
+DriverVer   = 09/28/2010, 1.00.0928.2010
+CatalogFile.NT = XPTWOPORT.cat
+
+[Manufacturer]
+%Realtek%     = Realtek,NTx86,NTamd64
+
+[Realtek.NTx86]
+%RTL_Desc%    = XPTWOPORT.ndi, XPTWOPORT_PT
+
+[Realtek.NTamd64]
+%RTL_Desc%    = XPTWOPORT.ndi, XPTWOPORT_PT
+
+; Note:
+; 1. The NCF_* flags are defined in netcfgx.h
+; 2. NCF_HAS_UI (0x80) is required for custom property pages.
+
+[XPTWOPORT.ndi]
+AddReg          = XPTWOPORT.ndi.AddReg
+Characteristics = 0x00 ; Not NCF_HAS_UI
+copyfiles       = XPTWOPORT.CopyFiles.sys
+CopyInf	        = XPTWOPORT_MP.INF
+
+[SourceDisksNames]
+1=%DiskDescription%,"",,
+
+[SourceDisksFiles]
+XPTWOPORT.SYS     = 1
+
+[DestinationDirs]
+DefaultDestDir      = 12
+XPTWOPORT.CopyFiles.sys  = 12   ; %windir%\System32\drivers
+
+[XPTWOPORT.CopyFiles.sys]
+XPTWOPORT.SYS,,,2
+
+;-----------------------------------------------------------------------
+;  Install parameters
+;
+
+[XPTWOPORT.ndi.AddReg]
+HKR, Ndi,            ClsID,         0, {4e996ff3-564c-49cb-8157-f23a0610913d}
+HKR, Ndi,            HelpText,      0,          "%RTL_HELP%"
+HKR, Ndi,            Service,       0,          "XPTWOPORT"
+HKR, Ndi\Interfaces, UpperRange,    0,          "noupper"
+HKR, Ndi\Interfaces, LowerRange,    0,          "ndis5"
+
+
+[XPTWOPORT.ndi.Services]
+AddService = XPTWOPORT, , XPTWOPORT.AddService, XPTWOPORT.AddEventLog
+
+[XPTWOPORT.AddService]
+DisplayName     = %RTL_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 3 ;SERVICE_DEMAND_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\XPTWOPORT.SYS
+Description     = %RTL_Desc%
+
+[XPTWOPORT.AddEventLog]
+AddReg = XPTWOPORT.AddEventLog.AddReg
+
+[XPTWOPORT.AddEventLog.AddReg]
+HKR, , EventMessageFile, 0x20000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x10001, 7
+
+[XPTWOPORT.ndi.Remove.Services]
+DelService = XPTWOPORT
+
+[XPTWOPORT.ndi.Remove]
+DelFiles = XPTWOPORT.CopyFiles.sys
+
+[Strings]
+Realtek = "Realtek"
+RTL_Desc = "XP TWO PORT Intermediate Driver"
+RTL_HELP = "XP TWO PORT Intermediate Driver"
+DiskDescription = "XPTWOPORT Disk"
+
+
+

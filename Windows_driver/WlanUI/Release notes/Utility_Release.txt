@@ -1,0 +1,2709 @@
+*********************************************************************
+Title: Realtek Wireless LAN Utility Release Note.
+*********************************************************************
+
+#####################################################################
+  Name:          RtWLan
+  Version:       402.2006.1.18
+  Released By:   Karl
+  Release Date:  01/18/2006
+  Reason: 
+	1.Increases install UI for X64.    
+	2.Unifies the Install Path with Rtl8187.
+	3.Revises the installshield part character to be unable normally to demonstrate the question.
+	4.The revision uses Microsoft UI to control the WZC switch we UI to be unable normally to demonstrate the question.
+	5.Increases different card use different profile list.
+	6.Channel Set reelection country.
+	7.Revises RtlLib.dll to increase for X64. about the Register control.
+	8.The creation limits Utility Profile Name a character Yuan number to limit 49 characters Yuan.
+	9.The creation limits Utility SSID Name a character Yuan number and limits 32 characters Yuan.
+	11.Off Ezconfig.
+
+  Comment: UI for X64
+#####################################################################
+  Name:          RtWLan
+  Version:       402.2006.1.26
+  Released By:   Karl
+  Release Date:  01/26/2006
+  Reason:  
+	1.Accepts four key different length.      
+	2.Supposes the switch install must be WZC mode. //You can modify the text.file under \\DATA
+							//WZC=1 or WZC=0
+  	3.Revision exceptionally chooses Country. 
+	 //You can modify the text.file under \\DATA
+         //AutoSelected=1  ;1 means nCountry= default value and no UI for user to select domain, 
+                           ;0 means there is UI for user to select
+
+         //nCountry= 2 	;CountryList[]={
+         		0 "FCC Standard"
+         		1 "IC Standard"
+         		2 "ETSI Standard"
+         		3 "Spain Standard"
+         		4 "France Standard"
+         		5 "MKK Standard"
+         		6 "MKK1 Standard"
+         		7 "Israel Standard"
+         		8 "TELEC Standard"
+         		9 "African"
+         		10 "Australia"
+         		11 "Belgium"
+         		12 "Canada"
+         		13 "China"
+         		14 "Colombia"
+         		15 "Czech Republic"
+         		16 "Egypt"
+         		17 "Europe"
+         		18 "France"
+         		19 "Gaza Stri"
+         		20 "Germany"
+         		21 "Greece"
+         		22 "Hong Kong"
+         		23 "India"
+         		24 "Israel"
+         		25 "Italy"
+         		26 "Japan(MKK)"
+         		27 "Japan(MKK1)"
+         		28 "Korea"
+         		29 "Luxembourg"
+         		30 "Malaysia"
+         		31 "Mexico"
+         		32 "Netherlands"
+         		33 "New Zealand"
+         		34 "Poland"
+         		35 "Portugal"
+         		36 "Singapore"
+         		37 "South Africa"
+         		38 "Spain"
+         		39 "Taiwan"
+         		40 "Thailand"
+         		41 "Turkey"
+         		42 "Ukraie"
+         		43 "United Kingdom"
+         		44 "United States" };
+
+  Comment: Accepts four key different length.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1001
+  Released By:   Karl
+  Release Date:  02/08/2006
+  Reason:  
+	1.Add call RT_Disassociate() on S4.      
+
+  Comment: Revises Qcom to be unable the Link AP in Tikp or AES S4.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1002
+  Released By:   Karl
+  Release Date:  02/22/2006
+  Reason:  
+	1.Revises Restart PC ,UI will renew connection when open Desktop UI.
+	2.Revises WZC contrl is on,UI Available Network (show Double click on item to join/create profile).      
+
+  Comment: Revises Restart PC & WZC contrl.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1003
+  Released By:   Vincent
+  Release Date:  02/23/2006
+  Reason:  
+	1.Add 3 Keywords in text.file for Network-key/Confirm-Network-key appearance or asterisked.
+		if ( EnableAsterisked!="" )
+			there is one "Network-key asterisked" check-button will appear to control Network-key/Confirm-Network-key appearance or asterisked
+		else 
+			if ( NotKeyPassword!="" )
+				if ( EnableKeyPasswordEdit!="" )
+					In Add-profile, the Network-key/Confirm-Network-key will appear, not be asterisked
+					In Edit-profile, the Network-key/Confirm-Network-key will be asterisked
+				else
+					In Add-profile, the Network-key/Confirm-Network-key will appear, not be asterisked
+					In Edit-profile, the Network-key/Confirm-Network-key will appear, not be asterisked
+				endif
+			endif
+		endif
+
+	2. for Pronet, it will be : NotKeyPassword="Yes", EnableKeyPasswordEdit="", EnableAsterisked=""
+		      
+ #####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1004
+  Released By:   Karl
+  Release Date:  03/6/2006
+  Reason:  
+	1. Revision bug for Site Survey list (Rates).
+	2. Revises Radio off is Show for Disable Adapter.      
+
+  Comment: Revision bug for Site Survey list.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1005
+  Released By:   Karl
+  Release Date:  03/13/2006
+  Reason:  
+	1. Revision WZC bug for RT_IsXPConfig().     
+
+  Comment: Revision bug for WZC.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402.0.5.1006
+  Released By:   Karl
+  Release Date:  04/06/2006
+  Reason:  
+	1. about B mode ,list B and G mode AP.     
+
+  Comment: Revision bug for B mode.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1080, 0407, 2006
+  Released By:   Karl
+  Release Date:  04/07/2006
+  Reason:  
+	1. Revision bug for 802.1x (revision by CCW).     
+
+  Comment: Revision bug for 802.1x.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1090, 0419, 2006
+  Released By:   Karl
+  Release Date:  04/19/2006
+  Reason:  
+	1. Revision (CPU Utilization to 100%)bug for WZC-ON.     
+
+  Comment: Revision bug for WZC-ON.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1100, 0425, 2006
+  Released By:   Karl
+  Release Date:  04/25/2006
+  Reason:  
+	1. Revision memory leak bug for ICS Api.     
+
+  Comment: Revision bug for memory leak.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1110, 0426, 2006
+  Released By:   Karl
+  Release Date:  04/26/2006
+  Reason:  
+	1. Revision SET AUTO for WirelessMode A/B/G.     
+
+  Comment: Revision bug for Set WirelessMode.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1120, 0428, 2006
+  Released By:   Karl
+  Release Date:  04/28/2006
+  Reason:  
+	1. Revision user account bug for Read/Write Profile.     
+
+  Comment: Revision bug for user account.
+#####################################################################
+ 
+  Name:          RtWLan
+  Version:       402, 1130, 0502, 2006
+  Released By:   Karl
+  Release Date:  05/02/2006
+  Reason:  
+	1. Revision WirelessMode A/B/G alters to A .      
+
+  Comment: Revision bug for WirelessMode.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1140, 0503, 2006
+  Released By:   Karl
+  Release Date:  05/03/2006
+  Reason:  
+	1. Supposes the (Fast switch user).      
+
+  Comment: Supposes the (Fast switch user).
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1150, 0508, 2006
+  Released By:   Karl
+  Release Date:  05/05/2006
+  Reason:  
+	1. Revision Setting bug for (limit user).      
+
+  Comment: Revision Setting bug for (limit user).
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1160, 0515, 2006
+  Released By:   Karl
+  Release Date:  05/15/2006
+  Reason:  
+	1. Add 802.1x for WEP(add by CCW).      
+
+  Comment: Add 802.1x for WEP.
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1170, 0525, 2006
+  Released By:   Karl
+  Release Date:  05/25/2006
+  Reason:  
+	1. Supports the multi- countries language. 
+	2. Supports the multi-Utility(RTL8185 and RTL8187 coexist). 
+    3. Easy Setting utility in \\DATA\text.file
+           [UI Config]
+           AP_Mode_ENABLE="1"
+           AP_Mode_WPA_PSK_ENABLE="0"  //RTL8185 AP Mode not have WPA-PSK
+           WPA2_ENABLE="1"
+           WOL_SHOW="0"
+           802_1X_SHOW="1"
+           Channel_Plan_SHOW="1"
+           EzConfigPage_SHOW="1"       //Easy Config Page ;1=ON/0=OFF
+
+  Comment: multi-language.
+#####################################################################     
+
+  Name:          RtWLan
+  Version:       402, 1180, 626, 2006
+  Released By:   Karl
+  Release Date:  06/26/2006
+  Reason:  
+	1. Supports the Disable Adapter for X64 os. 
+	2. Supports the WDS AP Mode.
+	 Easy Setting utility in \\DATA\text.file
+           [UI Config]
+           WDS_AP_Mode_ENABLE="1"
+
+  Comment: Disable Adapter for X64.
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1190, 801, 2006
+  Released By:   Karl
+  Release Date:  08/01/2006
+  Reason:  
+	1. Revision bug for RT_Set. 
+	2. Supports the RT_Set Easy Setting utility in \\DATA\text.file.
+           [UI Config]
+           RT_SET_ENABLE="1"
+    3. Revision Hide bug for Show Tray ICO.
+  Comment: Revision bug for RT_Set.
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1200, 901, 2006
+  Released By:   Karl
+  Release Date:  09/01/2006
+  Reason:  
+	1. (Eappkt and Aegisp)UI Source Code all in one. 
+        2. Supports the multi- countries language for 98/me os.
+        3. Remove RtWake.exe for 98/me os.
+  Comment: Eappkt and Aegisp UI Source Code all in one.(Eappkt-RtlLib v220.3001.901,2006)
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1210, 906, 2006
+  Released By:   Karl
+  Release Date:  09/06/2006
+  Reason:  
+	    1. Revision (AUTO Link Default Profile) bug for WinXP(NO WZC sercice) . 
+  Comment: UILinkDefaultProfile() bug
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1220, 908, 2006
+  Released By:   Karl
+  Release Date:  09/06/2006
+  Reason:  
+        1. increase performace .
+	    2. Revision PreambleMode(AUTO) bug for AP Mode .
+		 
+  Comment: performace
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1220, 908, 2006
+  Released By:   Karl
+  Release Date:  09/06/2006
+  Reason:  
+        1. increase performace .
+	    2. Revision PreambleMode(AUTO) bug for AP Mode .
+		 
+  Comment: performace
+##################################################################### 
+
+
+  Name:          RtWLan
+  Version:       402, 1230, 925, 2006
+  Released By:   Karl
+  Release Date:  09/25/2006
+  Reason:  
+        1. Revision DHCP bug for Win98/ME.
+		 
+  Comment: DHCP 
+#####################################################################
+
+
+  Name:          RtWLan
+  Version:       402, 1240, 1003, 2006
+  Released By:   Karl
+  Release Date:  10/03/2006
+  Reason:  
+        1. Revision bug for Selected Adapter.
+		 
+  Comment: Selected Adapter
+#####################################################################
+
+
+  Name:          RtWLan
+  Version:       402, 1250, 1017, 2006
+  Released By:   Karl
+  Release Date:  10/17/2006
+  Reason:  
+        1. Revision AUTO Selected Adapter.
+		 
+  Comment: AUTO Selected Adapter
+#####################################################################
+
+
+  Name:          RtWLan
+  Version:       402, 1260, 1026, 2006
+  Released By:   Karl
+  Release Date:  10/26/2006
+  Reason:  
+        1.add Supports the multi-Adapter HWID for RtlLib.DLL(V402.1200.1025.2006).
+		 
+  Comment: multi-Adapter HWID
+#####################################################################
+
+
+  Name:          RtWLan
+  Version:       402, 1270, 1107, 2006
+  Released By:   Karl
+  Release Date:  11/07/2006
+  Reason:  
+		1.add Supports Disable/Enable Adapter for WIN98/ME. 
+        2.add Supports Setting IP for WIN98/ME .
+		 
+  Comment: Disable/Enable Adapter for WIN98/ME
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1280, 1109, 2006
+  Released By:   Jacken
+  Release Date:  11/09/2006
+  Reason:  
+		1.add Supports Wi-Fi Protect Set
+		 
+  Comment: Wi-Fi Protect Set for WINXP/2000
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1290, 1124, 2006
+  Released By:   karl
+  Release Date:  11/24/2006
+  Reason:  
+		1.Revision (DHCP)bug for Remove Adapter.
+		2.Revision bug(load EAPPkt Driver) for RT_Initialize.
+                3.Revision bug for Get Driver information.
+		 
+  Comment: Bug for Eappkt LIB
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1300, 1204, 2006
+  Released By:   karl
+  Release Date:  12/04/2006
+  Reason:  
+           	1.Show different UI setting for different model type.
+                 ex:
+                   	8185 load 8185.ini setting
+			8187 load 8187.ini setting
+			8185B load 8185B.ini setting
+			8187B load 8187B.ini setting
+		 
+  Comment: AUTO Chack Mode type(8187/8187B/8185/8185B)
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1310, 1212, 2006
+  Released By:   karl
+  Release Date:  12/12/2006
+  Reason:  
+           	1. Supports Gina.
+
+  Comment: Supports Gina
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1320, 1218, 2006
+  Released By:   karl
+  Release Date:  12/18/2006
+  Reason:  
+           	1. Supports Disable Show on UI for Zero Config.
+	 	    //You can modify the text.file &(8185.ini|8185B.ini|8187.ini|8187B.ini) under \\DATA
+         	//ZeroConfig_SHOW="0"   ;0 not Show Zero Config.   
+
+  Comment: Disable Show Zero Config
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1330, 1229, 2006
+  Released By:   karl
+  Release Date:  12/29/2006
+  Reason:  
+           	1. Revision multi-language string for RT-Set and about title.   
+
+  Comment: string
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1340, 0105, 2007
+  Released By:   karl
+  Release Date:  1/5/2007
+  Reason:  
+           	1. Revision Vanishes bug for Show MENU.   
+
+  Comment: MENU bug
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1350, 0111, 2007
+  Released By:   karl
+  Release Date:  1/11/2007
+  Reason:  
+           	1. Revision Key index bug for WEP.   
+
+  Comment: MENU bug
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1360, 0116, 2007
+  Released By:   karl
+  Release Date:  1/16/2007
+  Reason:  
+           	1.ADD PSP XLink.
+			2.ADD WMM (QoS & Power Save (APSD) Enable).   
+
+  Comment: PSP & WMM
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1370, 0119, 2007
+  Released By:   karl
+  Release Date:  1/19/2007
+  Reason:  
+           	1.ADD WPA2 for AP_Mode.  
+
+  Comment: WPA2 for AP_Mode
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1380, 0122, 2007
+  Released By:   karl
+  Release Date:  1/22/2007
+  Reason:  
+           	1.Fix index bug for WEP.  
+
+  Comment: WEP bug
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1390, 0215, 2007
+  Released By:   karl
+  Release Date:  2/15/2007
+  Reason:  
+           	1.fix '&' bug for SSID. 
+			2.fix ICS bug for APmode.
+
+  Comment: '&'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       402, 1400, 0307, 2007
+  Released By:   karl
+  Release Date:  3/07/2007
+  Reason:  
+           	1.add UIType for CC&C. 
+			2.fix memory bug for Progress Bar.
+			3.fix bug for Switch AP/Station Mode.
+
+  Comment: 'Switch AP/Station Mode'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1410, 0314, 2007
+  Released By:   karl
+  Release Date:  3/14/2007
+  Reason:  
+			1.fix ICS bug forAP Mode.
+			2.fix even message bug for DeviceChange.
+			3.Merge WPS for WinXP_UISourceCode.
+			4.Revision PostMessage to ASUS_Guru UI.
+
+  Comment: 'ICS'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1420, 0322, 2007
+  Released By:   karl
+  Release Date:  3/22/2007
+  Reason:  
+			1.Revision LinkProfile() for AP Mode  (R/W REG).
+			2.fix SSID bug for SiteSurvey.
+
+  Comment: 'SSID len=32'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1430, 0329, 2007
+  Released By:   karl
+  Release Date:  3/29/2007
+  Reason:  
+           	1.Revision SiteSurvey BUG for Set Wizard.
+			2.fix BUG for Radio Off.
+			
+
+  Comment: 'SiteSurvey'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1430, 0411, 2007
+  Released By:   karl
+  Release Date:  4/11/2007
+  Reason:  
+           	1.fix Disable/Enable BUG for Microsoft UI.
+			2.fix Set default BUG for Advanced.
+			
+
+  Comment: 'Set default'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1440, 0419, 2007
+  Released By:   karl
+  Release Date:  4/19/2007
+  Reason:  
+           	1.Revision ReInitialized(Disconnected) for DeviceChange Message.
+			
+
+  Comment: 'DeviceChange'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1450, 0501, 2007
+  Released By:   karl
+  Release Date:  5/1/2007
+  Reason:  
+           	1.Revision PEAP for 802.1x (by CCX).
+			2.Revision Input MAC for WOL.
+			3.Revision "Soft AP" to "ICS"
+			4.Revision Life Time for Soft AP.
+
+  Comment: '802.1x'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1460, 0503, 2007
+  Released By:   karl
+  Release Date:  5/3/2007
+  Reason:  
+           	1.Add Set length limit 49 for Duplicate profile name.
+			2.limits one Diglog for About_Diglog.
+			3.Revision multi-Diglog for warning Message. 
+			4.limits ReSize for UI_Frame.
+
+  Comment: 'multi-MessageBox warning'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1470, 0523, 2007
+  Released By:   karl
+  Release Date:  5/23/2007
+  Reason:  
+           	1.Revision status Authenticate show "WPA2-PSK" for not Link.
+			2.Revision ICS for AP mode.
+			3.Fix UI crash bug for WPS(PIN). 
+
+  Comment: 'status Authenticate'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1480, 0606, 2007
+  Released By:   karl
+  Release Date:  6/6/2007
+  Reason:  
+           	1.Fixed PBC Restart bug for WPS (By Jacken).
+			2.Fix Setting (Fragment Threshold) Bug for WLanAdvancedPage.
+
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1480, 0612, 2007
+  Released By:   Vincent
+  Release Date:  6/12/2007
+  Reason:  
+           	1. Modify RT Setup-Wizard AP mode to support WPA2-PSK
+			2. Add function to check connection status after WPS generated profile.
+
+  Comment: 'RT-Set'
+#####################################################################
+  Name:          RtWLan
+  Version:       402, 1490, 0626, 2007
+  Released By:   Karl
+  Release Date:  6/26/2007
+  Reason:  
+           	1.Fixed Bug for show (Wi-Fi Protect Set) Page.
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1491, 0627, 2007
+  Released By:   Karl
+  Release Date:  6/27/2007
+  Reason:  
+           	1.Fixed Bug for Set ChannelPlan.
+  Comment: 'ChannelPlan'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1492, 0724, 2007
+  Released By:   Jacken
+  Release Date:  7/24/2007
+  Reason:  
+           	1.Change WPS Function.
+		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1494, 0803, 2007
+  Released By:   Jacken
+  Release Date:  08/03/2007
+  Reason:  
+           	1.Add support 8190
+		
+  Comment: '8190'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1495, 0806, 2007
+  Released By:   Jacken
+  Release Date:  08/06/2007
+  Reason:  
+           	1.Add WPS Multi-Language
+		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1496, 08??, 2007
+  Released By:   ???
+  Release Date:  ???
+  Reason:  	 ???
+           	
+		
+  Comment: 	 ???
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1497, 0831, 2007
+  Released By:   Vincent
+  Release Date:  09/04/2007
+  Reason:  
+           	1. Add 802.1x supporting
+		2. No more delete ACM profiles while Profile page initialization.
+		3. Add ACM_UILinkDefaultProfile() : 
+		4. Add AP_ACM_LinkTemporaryProfile() : do not save profile to ACM
+		5. Add ACM_LinkDefaultTemporaryProfile() : will use ACM profile for 802.1x profile
+		6. modify ACM_LinkTemporaryProfile() : will save profile to ACM
+		
+  Comment: '802.1x'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1498, 0926, 2007
+  Released By:   Jacken
+  Release Date:  09/26/2007
+  Reason:  
+           	1.Fixed WPS bug
+		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1502, 1024, 2007
+  Released By:   Jacken
+  Release Date:  10/24/2007
+  Reason:  
+           	1.Add support 8187S
+		
+  Comment: '8187S'
+#####################################################################
+
+ Name:          RtWLan
+  Version:       500, 1503, 1025, 2007
+  Released By:   Vincent
+  Release Date:  10/25/2007
+  Reason:  
+		1. Delete all ACM profiles when WPS starting
+		2. modifiy WPS "Add profile" behavior
+
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1504, 1030, 2007
+  Released By:   Jacken
+  Release Date:  10/30/2007
+  Reason:  
+           	1.Fixed CPU Utilization 100% issue
+		
+  Comment: 'CPU'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1505, 1108, 2007
+  Released By:   Jacken
+  Release Date:  11/08/2007
+  Reason:  
+           	1.Fixed RF Enable after S3
+		2.Fixed when run WPS , the device unplug but UI still run.
+		
+  Comment: 'RF , WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1506, 1115, 2007
+  Released By:   Vincent
+  Release Date:  11/15/2007
+  Reason:  
+           	1.Fix "WPS-PBC/WPS-PIN Cancel" issue, UI can connect to last profile.
+		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1507, 1126, 2007
+  Released By:   Jacken
+  Release Date:  11/26/2007
+  Reason:  
+           	1.Add Model to support 8192P & 8192U
+		
+  Comment: '8192'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1508, 1127, 2007
+  Released By:   Jacken
+  Release Date:  11/27/2007
+  Reason:  
+           	1.Change "Wlan Uitily" to "Wlan Utility"
+		2.Change ChipType issue for 8192
+		3."8192p" Change to "8192e"
+ 		
+  Comment: 'String'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1509, 1129, 2007
+  Released By:   Jacken
+  Release Date:  11/29/2007
+  Reason:  
+           	1.Add model "8187SU"
+ 		
+  Comment: '8187SU'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1510, 1203, 2007
+  Released By:   Karl
+  Release Date:  12/03/2007
+  Reason:  
+           	1.add Relinks for Setting WirelessMode.
+ 		
+  Comment: 'Relinks'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1511, 1207, 2007
+  Released By:   Jacken
+  Release Date:  12/07/2007
+  Reason:  
+           	1.Fixed WPS "0000000000" issue
+ 		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1512, 1212, 2007
+  Released By:   Jacken
+  Release Date:  12/12/2007
+  Reason:  
+           	1.Send Selected MAC to WPS
+ 		
+  Comment: 'WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1513, 1218, 2007
+  Released By:   Jacken
+  Release Date:  12/18/2007
+  Reason:  
+           	1.Fixed disable adapter tree view show icon
+		2.Fixed RTS Number fail after restart
+ 		
+  Comment: 'ICON , RTS'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1514, 1221, 2007
+  Released By:   Jacken
+  Release Date:  12/21/2007
+  Reason:  
+           	1.Fixed Command Line can be click in string issue.
+ 		
+  Comment: 'Command Line'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1515, 0103, 2007
+  Released By:   Jacken
+  Release Date:  01/03/2008
+  Reason:  
+           	1.Fixed when driver Link at ANY , UI will not set linkany
+		2.Add icon to unknow networktype
+ 		
+  Comment: 'linkany' 'networktype'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1516, 0114, 2007
+  Released By:   Vincent
+  Release Date:  01/14/2008
+  Reason:  
+           	1.fix "Server Busy" issue
+ 		
+  Comment: '802.1x'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1517, 0219, 2007
+  Released By:   Jacken
+  Release Date:  02/19/2007
+  Reason:  
+           	1.Fixed the string over button bug.
+		2.Fixed the select AP Dialog can't be closed when the device be unplug.
+ 		
+  Comment: 'unplug'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1518, 0403, 2007
+  Released By:   Jacken
+  Release Date:  04/03/2007
+  Reason:  
+           	1.Add Hardware PBC Function.
+		2.Add 11n TxRx Rate show in debug page.
+ 		
+  Comment: 'HWPBC'
+#####################################################################
+
+
+  Name:          RtWLan
+  Version:       500, 1519, 408, 2008
+  Released By:   Karl
+  Release Date:  4/8/2008
+  Reason:  
+           	1.Follow XP to Update Version.
+
+  Comment: 'Mesh mode'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1520, 0409, 2007
+  Released By:   Jacken
+  Release Date:  04/09/2007
+  Reason:  
+           	1.Fixed 11n Tx show 300M in 10 sec.
+		2.When S3/S4 , UI will hide to the trayicon.
+		3.Fixed the bug of RF off
+ 		
+  Comment: 'S3/S4'
+#####################################################################
+  Name:          RtWLan
+  Version:       500, 1521, 410, 2008
+  Released By:   Karl
+  Release Date:  4/10/2008
+  Reason:  
+           	1.Follow XP to Update Version.
+
+  Comment: 'Mesh mode'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       500, 1522, 414, 2008
+  Released By:   Jacken
+  Release Date:  4/14/2008
+  Reason:  
+			1.Change 11n Tx Rate show in general Page.
+
+  Comment: 'Tx Rate'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       500, 1523, 415, 2008
+  Released By:   Jacken
+  Release Date:  4/15/2008
+  Reason:  
+			1.Modify Tx rate show.
+
+  Comment: 'Tx Rate'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       500, 1524, 416, 2008
+  Released By:   Vincent
+  Release Date:  4/16/2008
+  Reason:  
+		1.Follow XP to Update Version.
+
+  Comment: 'Ad Hoc'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1525, 424, 2008
+  Released By:   Karl
+  Release Date:  4/24/2008
+  Reason:  
+		1.Fixed the UI Busy for LinkProfile control.
+		2.Fixed WIRELESS_MODE of N Mode.
+
+  Comment: 'UI Busy for LinkProfile control'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1526, 428, 2008
+  Released By:   Karl
+  Release Date:  4/28/2008
+  Reason:  
+		1.Fixed Update UI BUG for Update_AP_View & Update_Station_View.
+
+  Comment: 'Update View'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1527, 430, 2008
+  Released By:   Karl
+  Release Date:  4/28/2008
+  Reason:  
+		1.Fixed BUG for Run multi-UI.
+
+  Comment: 'multi-UI'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1532, 502, 2008
+  Released By:   Karl
+  Release Date:  5/02/2008
+  Reason:  
+		1.Fixed S3/S4 BUG for OnPowerBroadcast.
+
+  Comment: 'OnPowerBroadcast'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1533, 505, 2008
+  Released By:   Karl
+  Release Date:  5/05/2008
+  Reason:  
+		1.Fixed Read .ini BUG for GetChipType.
+
+  Comment: 'GetChipType'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1534, 506, 2008
+  Released By:   Karl
+  Release Date:  5/06/2008
+  Reason:  
+		1.Fix UI_hang for double click profile.
+		2.Fix double_LinkProfile(Fail Link) for plugging in NIC.
+
+  Comment: 'Double LinkProfile'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1535, 512, 2008
+  Released By:   Karl
+  Release Date:  5/12/2008
+  Reason:  
+		1.Add Show Tx Rate.
+
+  Comment: 'Tx Rate'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1536, 514, 2008
+  Released By:   Karl
+  Release Date:  5/14/2008
+  Reason:  
+		1.Fix BUG for Show Page.
+		2.Revision Switch Mode.
+		3.Fix BUG for Show TrayIcon.
+
+  Comment: 'Show Page'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1537, 516, 2008
+  Released By:   Hpfan
+  Release Date:  5/16/2008
+  Reason:  
+		1.Fix BUG for WPS connect.
+
+  Comment: 'WPS'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1538, 521, 2008
+  Released By:   Karl
+  Release Date:  5/21/2008
+  Reason:  
+		1. Add WPS external registrar.
+
+  Comment: 'external registrar'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1539, 523, 2008
+  Released By:   Karl
+  Release Date:  5/23/2008
+  Reason:  
+		1. Fix BUG Run LinkANY on AP_Mode.
+		2. Fix UILinkDefaultProfile() BUG.
+
+  Comment: 'UILinkDefaultProfile'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1540, 526, 2008
+  Released By:   Karl
+  Release Date:  5/26/2008
+  Reason:  
+		1. Fix BUG for LinkANY.
+		2. Fix Edit/Remove Profile BUG for Profile_Page.
+
+  Comment: 'Profile Edit'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1541, 529, 2008
+  Released By:   Karl
+  Release Date:  5/29/2008
+  Reason:  
+		1. Revises for Disable/Enable NIC.
+
+  Comment: 'Disable/Enable NIC'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1542, 611, 2008
+  Released By:   Karl
+  Release Date:  6/11/2008
+  Reason:  
+		1. Revises for S3 NIC.
+
+  Comment: 'S3 NIC'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1543, 618, 2008
+  Released By:   Karl
+  Release Date:  6/18/2008
+  Reason:  
+		1. add enable/disable external registrar for .ini file.
+
+  Comment: 'enable/disable external registrar'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1545, 619, 2008
+  Released By:   Karl
+  Release Date:  6/19/2008
+  Reason:  
+		1. Remove Sitesurvey on Init.
+		2. Revises UILinkDefaultProfile().
+
+  Comment: 'LinkDefaultProfile'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1546, 623, 2008
+  Released By:   Karl
+  Release Date:  6/23/2008
+  Reason:  
+		1. Add Input PIN_Code from AP (WPS).
+		2. Fix Memory Leak for CheckHWPBC().
+
+  Comment: 'PIN for WPS'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1547, 626, 2008
+  Released By:   Karl
+  Release Date:  6/26/2008
+  Reason:  
+		1. Add string for multi- language.
+
+  Comment: 'Add string'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1548, 701, 2008
+  Released By:   Karl
+  Release Date:  7/01/2008
+  Reason:  
+		1. Quickening Setting for ICS.
+
+  Comment: 'ICS'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1549, 702, 2008
+  Released By:   Karl
+  Release Date:  7/02/2008
+  Reason:  
+		1. Revises UILinkDefaultProfile for S4(RTL8190).
+		2. Revises Quickening Setting ICS for VistaX64.
+
+  Comment: 'Revises UILinkDefaultProfile for S4'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1550, 703, 2008
+  Released By:   Karl
+  Release Date:  7/03/2008
+  Reason:  
+		1. Revises Setting Defaults (WirelessMode/ChannelPlan) for Advanced Page.
+
+  Comment: 'Setting Defaults'
+#####################################################################
+
+  Name:          RtWLan
+  Version:       600, 1551, 708, 2008
+  Released By:   Hpfan
+  Release Date:  7/08/2008
+  Reason:  
+		1. Add API RT_WPS_External_Registrar_AP_PIN for WPS AP PIN.
+		2. Fix Config AP_Mode BUG.
+		3. Add API RT_SET_WPS_CUSTOMIZED_TIMEOUT_FLAG(bool flag) for customization timeout
+
+  Comment: 'WPS AP PIN'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1552, 716, 2008
+  Released By:   Karl
+  Release Date:  7/16/2008
+  Reason:  
+		1. Supports the multi-language for Show TrayIcon.
+
+        //in string.ini 
+		[TrayIconShow]
+		Is_connected_to="[Product] is connected to [SSID]"
+		Is_Disconnected="[Product] is Disconnected"
+		Has_not_found="no [Product]"
+		Is_Disable="[Product] is Disable"
+		Is_AP_Mode="[Product] is AP Mode"
+		Is_Mesh_Mode="[Product] is Mesh Mode"
+
+  Comment: 'Show TrayIcon string'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1553, 729, 2008
+  Released By:   Karl
+  Release Date:  7/29/2008
+  Reason:  
+		1. Fix WPS crash bug for Remove Adapter.
+		2. Fix UI crash bug fo WPS SiteSurvey.
+
+  Comment: 'Crash for WPS'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1554, 815, 2008
+  Released By:   Karl
+  Release Date:  8/15/2008
+  Reason:  
+		1. Show WPS_Page BUG for Resize.
+		2. Add API RT_WPSAPLockedSurvey(WPS_BSSID WPS_BSSID_List[150]) for AP Setup Locked survey (By )
+
+  Comment: 'BUG in WLanNormalSCPage'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1555, 820, 2008
+  Released By:   Karl
+  Release Date:  8/20/2008
+  Reason:  
+		1. Revises Edit Profile for Hide_SSID .
+		2. Revises Link Profile.
+
+  Comment: 'Link Profile'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1556, 825, 2008
+  Released By:   Karl
+  Release Date:  8/25/2008
+  Reason:  
+		1. Revises BUG for Add Profile.
+
+  Comment: 'Add Profile'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1557, 902, 2008
+  Released By:   Karl
+  Release Date:  9/02/2008
+  Reason:  
+		1.Close all Page for QUIT.
+		2.Revises Timer for UpDate TrayIcon.
+		3.Add On/off MAC Filter for AP_Mode. (MACfilterPage_SHOW="1")
+
+  Comment: 'MAC Filter'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1558, 918, 2008
+  Released By:   Karl
+  Release Date:  9/18/2008
+  Reason:  
+		1.Revises AUTO SEL Lan for ICS.
+
+  Comment: 'AUTO ICS'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1559, 925, 2008
+  Released By:   Jacken
+  Release Date:  9/25/2008
+  Reason:  
+		1.Add DHCP Server in SoftAP Mode.
+
+  Comment: 'DHCP Server'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1561, 1023, 2008
+  Released By:   Karl
+  Release Date:  10/23/2008
+  Reason:  
+		1.Revises ICS for SoftAP Mode.
+		2.Revises UpDate list for Statistics Page.
+		3.Revises DHCP Server.
+
+  Comment: 'ICS'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1562, 1027, 2008
+  Released By:   Karl
+  Release Date:  10/27/2008
+  Reason:  
+		1.Revises ICS for SoftAP Mode.
+
+  Comment: 'ICS'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1563, 1105, 2008
+  Released By:   Karl
+  Release Date:  11/05/2008
+  Reason:  
+		1.Revises run RtDHCP.exe for SoftAP.
+
+  Comment: 'RtDHCP'
+#####################################################################
+  Name:          RtWLan
+  Version:       600, 1564, 1120, 2008
+  Released By:   Karl
+  Release Date:  11/20/2008
+  Reason:  
+		1.Revises FRAME and String size.
+
+  Comment: 'Revises size'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1567, 113, 2009
+  Released By:   Karl
+  Release Date:  1/13/2008
+  Reason:  
+		1.add Supports Win7.  
+
+  Comment: 'Win7'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1568, 121, 2009
+  Released By:   Karl
+  Release Date:  1/21/2009
+  Reason:  
+		1.add Supports two IP Address for General_Page.  
+
+  Comment: 'two IP'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1569, 312, 2009
+  Released By:   Karl
+  Release Date:  3/12/2009
+  Reason:  
+		1.add Supports SoftAP for Win7.  
+
+  Comment: 'SoftAP for Win7'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1570, 326, 2009
+  Released By:   Karl
+  Release Date:  3/26/2009
+  Reason:  
+		1.add Supports Link_ANY_ENABLE="0".  
+
+  Comment: 'Enable/Deable Link ANY'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1571, 403, 2009
+  Released By:   Karl
+  Release Date:  4/3/2009
+  Reason:  
+		1.Fix BUG for Find & Init Adapter.  
+
+  Comment: 'Init Adapter'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1572, 415, 2009
+  Released By:   Karl
+  Release Date:  4/16/2009
+  Reason:  
+		1.Setting DeviceChange TimerOut 30s (nDeviceChange=60).  
+
+  Comment: 'DeviceChange TimerOut'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1573, 428, 2009
+  Released By:   Karl
+  Release Date:  4/28/2009
+  Reason:  
+		1.Fix BUG for Disable/Enable Adapter.   
+
+  Comment: 'Disable/Enable Adapter'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1575, 511, 2009
+  Released By:   Karl
+  Release Date:  5/11/2009
+  Reason:  
+		1.Fix BUG for OnDeviceChange.   
+
+  Comment: 'OnDeviceChange'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1576, 522, 2009
+  Released By:   Karl
+  Release Date:  5/22/2009
+  Reason:  
+		1.Add LinkProfile for chack(HW RF-OFF => RF-ON).   
+		2.Revises multi- language string for WPS Page.
+		3.Add On/off ICS Page for AP_Mode. (ICS_Page_SHOW="1")
+
+  Comment: 'HW RF'
+#####################################################################
+  Name:          RtWLan (Vista)
+  Version:       700, 1577, 622, 2009
+  Released By:   Karl
+  Release Date:  6/22/2009
+  Reason:  
+		1.Revises Setting ICS for S3.   
+
+  Comment: 'ICS for S3'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1578, 702, 2009
+  Released By:   Karl
+  Release Date:  7/02/2009
+  Reason:  
+		1.Add Setting TxPower Percentage for General Page.   
+
+  Comment: 'Setting TxPower Percentage'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1579, 709, 2009
+  Released By:   Karl
+  Release Date:  7/09/2009
+  Reason:  
+		1.Fix S3 BUG for Radio off.   
+		2.92E disable adapter. 
+		3.Rewrites profile after the detachment.
+
+  Comment: 'Rewrites profile'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1580, 712, 2009
+  Released By:   Jacken
+  Release Date:  7/12/2009
+  Reason:  
+		1.Update detect APMode function in Win7
+		2.Modify frame 
+
+  Comment: 'AP MOde'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1581, 721, 2009
+  Released By:   Karl
+  Release Date:  7/21/2009
+  Reason: 
+        1.Add RT_ACM_SoftAP_GetStatus function. 
+		2.Update detect APMode for RT_ACM_SoftAP_GetStatus function.
+		3.Add control VWiFi (Start/Stop) API. 
+			RT_ACM_SoftAP_Start()
+			RT_ACM_SoftAP_Stop();
+		4.Add VWiFi Page.
+
+  Comment: 'VWiFi Page'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1582, 724, 2009
+  Released By:   Karl
+  Release Date:  7/24/2009
+  Reason: 
+        	1.Revises Show INFO for VWiFi.
+		2.Add VWiFi (Get MAC INFO) API. 
+		3.Revises Enable (SoftAP Start Button) for Vwifi allowed(Not available) Status.
+
+  Comment: 'VWiFi Get MAC'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1583, 804, 2009
+  Released By:   Jacken
+  Release Date:  8/04/2009
+  Reason: 
+        	1.Fixed bug of set 32 characters SSID in Virtual WiFi can't set & get
+		2.When adapter be unplug,the enable/disable checkbox will be hid.
+		3.Fixed bug "When WPS PIN Select AP , before sitsurvey AP complete , click cancel will crash."
+
+  Comment: 'VWiFi SSID'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1584, 814, 2009
+  Released By:   Jacken
+  Release Date:  8/14/2009
+  Reason: 
+        	1.Separate AP Mode & VWiFi Mode in Win7
+
+  Comment: 'VWiFi SSID'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1585, 818, 2009
+  Released By:   Jacken
+  Release Date:  8/18/2009
+  Reason: 
+        	1.Fix Win7 AP Mode set profile error and auth item error 
+
+  Comment: 'AP Mode'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1586, 825, 2009
+  Released By:   Karl
+  Release Date:  8/25/2009
+  Reason: 
+        	1.Delete AUTO Link Profile on Ad_Hoc Mode. 
+
+  Comment: 'Ad_Hoc Mode'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1587, 901, 2009
+  Released By:   Karl
+  Release Date:  9/01/2009
+  Reason: 
+        	1.Increases the accurate judgment to insert(plug-in)/Unplug the card (Use few CPU resources). 
+
+  Comment: 'chack plug-in/Unplug'
+#####################################################################
+  Name:          RtWLan (Vista/Win7)
+  Version:       700, 1588, 907, 2009
+  Released By:   Karl
+  Release Date:  9/07/2009
+  Reason: 
+           1. Supports the control Show/Hide VWiFi(Win7) for INI file.
+		      VWiFi_SHOW="1" // "1" Show , "0" Hide
+
+  Comment: 'control Show/Hide VWiFi(Win7)'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1589, 914, 2009
+  Released By:   Vincent
+  Release Date:  9/14/2009
+  Reason: 
+           1. add WAP(2)-PSK passphrase checking
+  Comment: 'Network property'
+#####################################################################
+  Name:          RtWLan
+  Version:       700, 1590, 922, 2009
+  Released By:   Karl
+  Release Date:  9/22/2009
+  Reason: 
+	1.add WPS Doing checking. 
+        2.add Driver connection checking for GET_CONNECT_STATE. (Fix OID Hung on connection).
+	4.ICS enable or disable can be selected manually by user using like as
+          Virtual WiFi SoftAP enable button at UI when Virtual WiFi SoftAP is enabled.
+        5.ICS function enable/disable for each network device (WLAN or Local LAN
+          or more LAN divece) can be selected by user at UI.
+
+  Comment: 'Fix OID Hung on connection state'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1590, 925, 2009
+  Released By:   Karl
+  Release Date:  9/25/2009
+  Reason: 
+	1.Hide VWiFi_ICS on Win7(Starter). 
+	2.Add GetOSDisplay(GetNativeSystemInfo) function.
+
+  Comment: 'Win7(Starter)'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1591, 930, 2009
+  Released By:   Karl
+  Release Date:  9/30/2009
+  Reason: 
+	1.When turn off Soft AP, the ICS of selected network device remain the shared state.
+	2.When turned off RF, the ICS of selected network device remain the shared state.
+	3.When do not use adaptor, the ICS of selected network device remain the shared state.
+
+  Comment: 'turn off ICS'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1592, 1008, 2009
+  Released By:   Karl
+  Release Date:  10/08/2009
+  Reason: 
+	1.Fix Radial Popup Botton for Enable ICS Botton (quickly click ICS_Botton issue).
+
+  Comment: 'Radial Popup Botton'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1593, 1013, 2009
+  Released By:   Karl
+  Release Date:  10/13/2009
+  Reason: 
+	1.Fix Init time Wake_UP form S3/S4 issue .
+
+  Comment: 'Init time'
+#####################################################################
+  Name:          RtWLan(Aegis/Eap)
+  Version:       700, 1591, 1015, 2009
+  Released By:   Karl
+  Release Date:  10/15/2009
+  Reason: 
+        	1. Revision wrong judgment is 802.1x for Switch to WAP2 SoftAP_mode(not Save Profile).  
+
+  Comment: 'wrong judgment is 802.1x'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1594, 1019, 2009
+  Released By:   Karl
+  Release Date:  10/19/2009
+  Reason: 
+	1.Fix ICS_List AUTO_Sort for Win7 (Sel ICS issue).
+	2.Revises ICS wait LinkProfile.
+
+  Comment: 'Sel ICS issue'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1595, 1023, 2009
+  Released By:   Karl
+  Release Date:  10/23/2009
+  Reason: 
+	1.Delete RtlDHCP in Win7 SoftAP.
+        2.Fix V700.1589.914.2009 HexKey BUG.
+
+  Comment: 'Delete RtlDHCP (Win7)'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1596, 1030, 2009
+  Released By:   Karl
+  Release Date:  10/30/2009
+  Reason: 
+	1.Support RtlDHCP on Win7 SoftAP.
+	2.Fix SoftAP BUG on Win7.
+
+  Comment: 'Support RtlDHCP on Win7 SoftAP'
+#####################################################################
+  Name:          RtWLan(Aegis/Eap)
+  Version:       700, 1592, 1103, 2009
+  Released By:   Karl
+  Release Date:  11/03/2009
+  Reason: 
+        	1.Fix Init time Wake_UP form S3/S4 issue .  (about Vista/Win7 V700, 1593, 1013, 2009)
+
+  Comment: 'Fix Init time for 92SU'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1597, 1109, 2009
+  Released By:   Karl
+  Release Date:  11/09/2009
+  Reason: 
+	1.Revision in sometime does not have automatic init adapter.
+	2.Support 3G Modem shared for ICS.
+
+  Comment: 'NO_AUTO init adapter'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1599, 1203, 2009
+  Released By:   Jacken
+  Release Date:  12/03/2009
+  Reason: 
+		1.Fixed Realtek QC found bugs.
+
+  Comment: 'QC'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1600, 1207, 2009
+  Released By:   Jacken
+  Release Date:  12/07/2009
+  Reason: 
+		1.Fixed switch AP mode to station mode hardware PBC issue.
+		2.Fixed string too long issue.
+
+  Comment: 'Hardware PBC'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1601, 1209, 2009
+  Released By:   Jacken
+  Release Date:  12/09/2009
+  Reason: 
+		1.Fixed Card initial issue.
+		2.Fixed AP PING string issue.
+
+  Comment: 'Card initial'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1602, 1224, 2009
+  Released By:   Jacken
+  Release Date:  12/24/2009
+  Reason: 
+		1.Fixed issue of disable Autoconfig service will ve terminate.
+		2.Fixed two same SSID AP sitesurvey issue. 
+		3.Fixed AP PING issue.
+		
+  Comment: 'sitesurvey'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1603, 1231, 2009
+  Released By:   Jacken
+  Release Date:  12/31/2009
+  Reason: 
+		1.Fixed PBC Cancel bug.
+		2.Fixed UI can't initial when device plug-in.
+		
+  Comment: 'Initial'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1604, 0108, 2010
+  Released By:   Jacken
+  Release Date:  01/08/2010
+  Reason: 
+		1.Fixed can't sitesurvey WEP issue.
+		2.Fixed show wrong link circle issue.
+		
+  Comment: 'WEP'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1605, 0126, 2010
+  Released By:   Jacken
+  Release Date:  01/26/2010
+  Reason: 
+		1.Remove Support Rate Column in Sitsurvey list .
+		
+  Comment: 'Support Rate'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1606, 0224, 2010
+  Released By:   Jacken
+  Release Date:  02/24/2010
+  Reason: 
+		1.Modify TX & RX Rate show item length .
+		
+  Comment: 'Rate show'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1607, 0309, 2010
+  Released By:   Karl
+  Release Date:  03/09/2010
+  Reason: 
+		1. Fix When turned Radio ON/OFF, stop(grey out) on Adhoc profile mode.
+		
+  Comment: 'Fix BUG on Radio ON/OFF'
+#####################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1608, 0310, 2010
+  Released By:   Jacken
+  Release Date:  03/10/2010
+  Reason: 
+		1. Fix "Open Utility" menu to restore window.
+		2. Modify TX/RX Rate show funtion.
+		
+  Comment: 'restore'
+#####################################################################  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1609, 0325, 2010
+  Released By:   Karl
+  Release Date:  03/25/2010
+
+  Reason:  
+     1.Fix RT_VERIFY_PIN (check PIN-Code) BUG for Input "qqqqqqqq".
+	 2.Revise check Mixed-mode(WPA&WPA2) security when WPA-AES & WPA2-TKIP.
+
+ Comment: 'WPA Mixed Mode'
+######################################################################
+  Name:          RtWLan(Vista/Win7)
+  Version:       700, 1610, 0407, 2010
+  Released By:   Karl
+  Release Date:  04/07/2010
+
+  Reason:  
+     1.Fix TerminateThread for LinkProfile.
+	 2.Add Destroy Window for "Run1X" (802.1X)
+
+  Comment: 'TerminateThread'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1611, 0416, 2010
+  Released By:   Jacken
+  Release Date:  04/16/2010
+
+  Reason:  
+     1.Add Win7 VWiFi to run RTLDHCP
+     2.Fix Sitsurvey can't set OID issue
+     3.Fix WPA/WPA2 Mixed mode can't change TKIP/AES issue.
+
+  Comment: 'VWiFi'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1612, 0503, 2010
+  Released By:   Karl
+  Release Date:  05/03/2010
+
+  Reason:  
+     
+     1.Fix switch user issue.
+	 2.Revision VWiFi Show allowed/disallowed.
+
+  Comment: 'switch user'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1613, 0506, 2010
+  Released By:   Jacken
+  Release Date:  05/06/2010
+
+  Reason:  
+     
+     	 1.Fix issue "after delete profile , UI will reconnect profile".
+	 2.Fix Registry garbled issue
+
+  Comment: 'reconnect'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1614, 0524, 2010
+  Released By:   Jacken
+  Release Date:  05/24/2010
+
+  Reason:  
+     
+     	 1.Fix VWiFi to use RTLDHCP issue.
+	 2.Fix Message when empty WEP key.
+	 3.Fix issue of "Edit property select WPA2 to 802.1x AUTH , after click cancel button , property will show 802.1x not WPA2"
+	 4.Add multi-card flow and WPS function to EzConfig steps.
+
+  Comment: 'RTLDHCP'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1616, 0609, 2010
+  Released By:   Jacken
+  Release Date:  06/09/2010
+
+  Reason:  
+     
+     	 1.Fix SoftAP to use RTLDHCP issue.
+	 2.Fix 802.1x link issue after S3
+
+  Comment: 'RTLDHCP'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1617, 0702, 2010
+  Released By:   Jacken
+  Release Date:  07/02/2010
+
+  Reason:  
+     
+     	 1.Add EzSharing function.
+	 2.Fix SoftAP DHCP.
+ 	 3.Fix VWiFi S3/S4 ICS issue.
+	 
+  Comment: 'EzSharing'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1619, 0712, 2010
+  Released By:   Jacken
+  Release Date:  07/12/2010
+
+  Reason:  
+     
+     	 1.Fix EzSharing bug.
+	 
+  Comment: 'EzSharing'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1620, 0716, 2010
+  Released By:   Jacken
+  Release Date:  07/16/2010
+
+  Reason:  
+     
+     	 1.Fix EzSharing bug.
+	 
+  Comment: 'EzSharing'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1621, 0719, 2010
+  Released By:   Jacken
+  Release Date:  07/19/2010
+
+  Reason:  
+     
+     	 1.After S3/S4 VWiFi & ICS will be disabled.
+	 
+  Comment: 'S3/S4'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1622, 0723, 2010
+  Released By:   Jacken
+  Release Date:  07/23/2010
+
+  Reason:  
+     
+     	 1.After unplug in softAP will set ICS issue.
+	 2.Modify SoftAP ICS issue.
+	 
+  Comment: 'SoftAP'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1623, 0727, 2010
+  Released By:   Jacken
+  Release Date:  07/27/2010
+
+  Reason:  
+     
+     	 1.Fix issue of "unplug device will initial again".
+	 
+  Comment: 'unplug'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1625, 0818, 2010
+  Released By:   Jacken
+  Release Date:  08/18/2010
+
+  Reason:  
+     	 1.Fixed issue of EzSetup.
+		 2.Fixed issue of show "&&"
+	 
+  Comment: 'EzSetup'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1626, 0902, 2010
+  Released By:   Karl
+  Release Date:  09/2/2010
+
+  Reason:  
+     	 1.Fixed UpDate Virtual WiFi Status issue for Win7.
+	     2.Fixed Set ICS issue for Virtual WiFi.
+		 3.Modify plugin/Unplug device.
+		 4.Modify init UI. 
+		 5.Modify S3/S4 .
+	 
+  Comment: 'Virtual WiFi Status & ICS'
+######################################################################
+  Name:          RtWLan 
+  Version:       700, 1627, 0929, 2010
+  Released By:   Vincent
+  Release Date:  09/29/2010
+
+  Reason:  
+	1. modify all functions in EzSharing page.
+	2. fix External Registrar issues.
+	3. fix spelling errors in source codes.
+	4. modify Gernal page to show MAC address always.
+	 
+  Comment: 'EzSharing & External Registrar'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1628, 930, 2010
+  Released By:   Karl
+  Release Date:  09/30/2010
+
+  Reason:  
+	1. Add SetSoftAP_Profile Function.
+	2. fix SoftAP & VWiFi switch issues.
+
+	Comment: 'SoftAP & VWiFi'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1629, 1012, 2010
+  Released By:   Karl
+  Release Date:  10/12/2010
+
+  Reason:  
+	1. Fix Init issues for Disable USB Adapter -> Unplug USB Adapter -> plugin USB Adapter.
+	2. Fix Setting ICS Loop for Radio_OFF SoftAP_Mode. 
+	3. Fix NDS Link SoftAP issues.
+	4. Fix Add 802.1X Profile issues.
+
+	Comment: 'ICS for Radio_OFF'
+######################################################################
+ Name:          RtWLan (Win7/Vista)
+  Version:       700, 1630, 1208, 2010
+  Released By:   Vincent
+  Release Date:  12/08/2010
+
+  Reason:  
+	1. Add WPS 2.0 
+
+	Comment: 'WPS 2.0'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1630, 1228, 2010
+  Released By:   Karl
+  Release Date:  12/28/2010
+
+  Reason:  
+    1. Add chack WEP-KEY Confirm network key does not match.
+	2. Add 9-13 channel plan.
+	3. Modify switch RF ON/OFF issues.
+	4. Modify switch Disable/Enable issues.
+
+	Comment: '9-13 channel plan'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1631, 107, 2011
+  Released By:   Karl
+  Release Date:  1/7/2011
+
+  Reason:  
+	1. Modify MessageBox issues for AP_Mode Advanced.
+	2. Modify Setting ICS issues for Select Shared network.
+
+	Comment: 'MessageBox'
+######################################################################  
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1632, 0331, 2011
+  Released By:   Vincent
+  Release Date:  03/31/2011
+
+  Reason:  
+	1. Fix "OID query/set is bolcked while connecting".
+	2. Default to Disable WPS2 functions.
+	3. Fix "SSID cannot be correctly displayed in Status page if it is 32 chars".
+	4. Fix "SSID cannot be correctly displayed in WPS PIN dialog if it contains '&' symbol".
+
+	Comment: 'SSID' 'OID'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1633, 0407, 2011
+  Released By:   Vincent
+  Release Date:  04/07/2011
+
+  Reason:  
+	1. Fix "UI crash when other clients connected with VWiFi SoftAP"
+
+	Comment: 'VWiFi'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1634, 0408, 2011
+  Released By:   Jacken
+  Release Date:  04/08/2011
+
+  Reason:  
+	1. Add Change SoftAP Default IP function
+
+	Comment: 'SoftAP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1637, 0717, 2011
+  Released By:   Jacken
+  Release Date:  07/18/2011
+
+  Reason:  
+	1.Add WiFi Direct function.
+        2.Modify SoftAP & VWiFi IP and ICS issue.
+
+	Comment: 'SoftAP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1639, 822, 2011
+  Released By:   Jacken
+  Release Date:  08/22/2011
+
+  Reason:  
+        1.Modify SoftAP & VWiFi IP and ICS issue.
+
+	Comment: 'SoftAP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1640, 0906, 2011
+  Released By:   Jacken
+  Release Date:  09/06/2011
+
+  Reason:  
+        1.Modify SoftAP & VWiFi IP and ICS issue.
+
+	Comment: 'SoftAP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1641, 1011, 2011
+  Released By:   Jacken
+  Release Date:  10/11/2011
+
+  Reason:  
+        1.Modify SoftAP & VWiFi IP and ICS issue.
+        2.Modify WiFi-Direct function.
+
+	Comment: 'WiFi-Direct'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1644, 1223, 2011
+  Released By:   Jacken
+  Release Date:  12/23/2011
+
+  Reason:  
+        1.Modify Vista hang issue.
+        2.Modify WiFi-Direct function.
+
+	Comment: 'WiFi-Direct'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1645, 0115, 2012
+  Released By:   Jacken
+  Release Date:  01/15/2011
+
+  Reason:  
+        1.Modify SoftAP & VWiFi ICS issue.
+
+	Comment: 'ICS'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1646, 0215, 2012
+  Released By:   Jacken
+  Release Date:  02/15/2011
+
+  Reason:  
+        1.Modify DHCP issue.
+        2.Modify Radio on/off issue.
+
+	Comment: 'DHCP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1646, 0215, 2012
+  Released By:   Jacken
+  Release Date:  02/15/2011
+
+  Reason:  
+        1.Modify DHCP issue.
+        2.Modify Radio on/off issue.
+
+	Comment: 'DHCP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1647, 0430, 2012
+  Released By:   Karl
+  Release Date:  04/30/2012
+
+  Reason:  
+        1.Fix Router issue for VWiFi Enable ICS.
+
+	Comment: 'Router issue'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1648, 0503, 2012
+  Released By:   Vincent
+  Release Date:  05/03/2012
+
+  Reason:  
+        1. Fix "ICS public connection selection/display" issue
+	2. Fix "Apply default profile" issue.
+	Comment: ICS, Default Profile
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1649, 0503, 2012
+  Released By:   Karl
+  Release Date:  05/03/2012
+
+  Reason:  
+        1.Modify Change SoftAP Default IP issue..
+
+	Comment: 'Change SoftAP IP issue'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1650, 0517, 2012
+  Released By:   Jacken
+  Release Date:  05/17/2012
+
+  Reason:  
+        1.Add QR Code function.
+
+	Comment: 'QR Code function'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1651, 0619, 2012
+  Released By:   Jacken
+  Release Date:  06/19/2012
+
+  Reason:  
+        1.Fixed device unplug function.
+	2.Modify SoftAP switch issue.
+
+	Comment: 'SoftAP switch issue'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1652, 0725, 2012
+  Released By:   Karl
+  Release Date:  07/25/2012
+
+  Reason:  
+        1.Fixed show SSID issue (32 characters) .
+        2.Fixed AutoLink profile issue (switch  Station mode -> AP mode -> Station mode) .
+		3.Fixed Set Channel issue for Ad-hoc mode.
+		4.Merge v700.1649.0503.2012 UI code(fix Change SoftAP Default IP issue).
+
+	Comment: 'AutoLink profile issue'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1653, 0810, 2012
+  Released By:   Karl
+  Release Date:  08/10/2012
+
+  Reason:  
+        1.Fixed AUTO set SoftAP Default IP issue for Disable-> Enable (Station mode) .
+		2.Modify show IP issue.
+
+	Comment: 'AUTO set SoftAP Default IP issue'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1654, 0814, 2012
+  Released By:   Jacken
+  Release Date:  08/14/2012
+
+  Reason:  
+        1.Modify WiFi-Direct issues.
+	2.Add QRCode encrypt function.
+
+	Comment: 'WiFi-Direct'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1655, 0904, 2012
+  Released By:   Karl
+  Release Date:  09/04/2012
+
+  Reason:  
+        1.Support check switch USB2.0/USB3.0 .
+
+	Comment: 'switch USB2.0/USB3.0'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1656, 0907, 2012
+  Released By:   Karl
+  Release Date:  09/07/2012
+
+  Reason:  
+        1.Modify check switch USB2.0/USB3.0 .
+
+	Comment: 'switch USB2.0/USB3.0'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1657, 0918, 2012
+  Released By:   Jacken
+  Release Date:  09/18/2012
+
+  Reason:  
+        1.Update Code to vs2008.
+	2.Modify SoftAP & VWiFi issue.
+
+	Comment: 'VS2008'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1658, 1023, 2012
+  Released By:   Jacken
+  Release Date:  10/23/2012
+
+  Reason:  
+        1.Disable Shared WEP in Win8.
+
+	Comment: 'WEP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1659, 1107, 2012
+  Released By:   Jacken
+  Release Date:  11/07/2012
+
+  Reason:  
+        1.Fixed Sitesurvey Mode issue.
+	2.Fixed UI can't destroy issue.
+
+	Comment: 'destroy'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1660, 1127, 2012
+  Released By:   Jacken
+  Release Date:  11/27/2012
+
+  Reason:  
+        1.Fixed Vista crash issue.
+	2.Fixed Win8 UI can't set profile issue.
+
+	Comment: 'crash'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1662, 0111, 2013
+  Released By:   Jacken
+  Release Date:  01/11/2012
+
+  Reason:  
+        1.Modify link rate and link mode function.
+	2.Fixed set default profile issue.
+        3.Fixed softap DHCP issue.
+
+	Comment: 'Link Mode'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1663, 0226, 2013
+  Released By:   Vincentc
+  Release Date:  02/26/2012
+
+  Reason:  
+        1. Fix UI-crash in child window or child window not closed while suddenly removed.
+        2. Fix Rt_GetMACAddress fail while connecting
+        3. Fix truncated SSID in Status page.
+	4. Fix illegal IP address setting in AP-config.
+        5. Fix UI operation mode conflict while user fast change selection.
+        6. Fix AdHoc channel-select in property window
+
+	Comment: 'Sudden;y remove' 'AP config' 'operation mode' 'channel'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1664, 0305, 2013
+  Released By:   Vincentc
+  Release Date:  03/05/2012
+
+  Reason:  
+        1. Fix UI cannot detect adapter after applying profile
+
+	Comment: 'detect adapter'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1665, 0322, 2013
+  Released By:   Karl
+  Release Date:  03/22/2013
+
+  Reason:  
+        1. Fix radio off/on for SoftAP mode.
+        2. Support Disable/Enable for Win8 64bit
+		    3. Merge v700.1649.0503.2012 UI code(fix setting ICS issue).
+		    4. Fixed DHCP Range issue.
+
+        Comment: 'Merge v700.1649.0503.2012'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1666, 0409, 2013
+  Released By:   Karl
+  Release Date:  04/09/2013
+
+  Reason:  
+        1. Modify Sitesurvey .
+		    2. Support Show for USB HUB_Type & mode. 
+		    3. Modify Show Cursor status.
+
+        Comment: 'Show for USB HUB_Type & mode'
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1656, 0410, 2013
+  Released By:   Karl
+  Release Date:  04/10/2013
+
+  Reason:  
+        1.Support check switch USB2.0/USB3.0 .
+        2.Support Show for USB HUB_Type & mode. 
+
+	Comment: 'switch USB2.0/USB3.0'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1667, 0422, 2013
+  Released By:   Karl
+  Release Date:  04/22/2013
+
+  Reason:  
+        1. Modify Show Cursor status.
+
+        Comment: 'Cursor status'
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1657, 0422, 2013
+  Released By:   Karl
+  Release Date:  04/22/2013
+
+  Reason:  
+        1. Modify Show Cursor status.
+
+        Comment: 'Cursor status'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1668, 0509, 2013
+  Released By:   Karl
+  Release Date:  05/09/2013
+
+  Reason:  
+        1.Modify SSID display problem in the status page.
+        2.Modify profile Process.
+        3.Support U2/U3 after done ReStart VWiFi.
+
+        Comment: 'profile Process'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1669, 0513, 2013
+  Released By:   Karl
+  Release Date:  05/13/2013
+
+  Reason:  
+        1.Fixed Softap DHCP issue.
+
+        Comment: 'Softap DHCP'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1670, 0703, 2013
+  Released By:   Karl
+  Release Date:  07/03/2013
+
+  Reason:  
+        1.Modify Changed SoftAP default IP issues when disable ICS.
+		    2.Modify Link AP issue for Switch mode.
+		
+        Comment: 'AUTO set Default profile issue'
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1658, 0813, 2013
+  Released By:   Karl
+  Release Date:  08/13/2013
+
+  Reason:  
+        1. Modify Show ChannelPlan String.
+
+        Comment: 'ChannelPlan String'
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1671, 0819, 2013
+  Released By:   Karl
+  Release Date:  08/19/2013
+
+  Reason:  
+        1. Modify Show ChannelPlan String.
+		    2. Fixed Reset issue on Statistics-Page(SoftAP).
+		    3. V700.1658.1023.2012 version has been changed to correct bad place.
+
+        Comment: 'ChannelPlan String'
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1659, 1007, 2013
+  Released By:   Karl
+  Release Date:  10/07/2013
+
+  Reason:  
+        1.Support check switch USB2.0/USB3.0 for connection is not selected MAC AP.
+
+        Comment: 'switch USB2.0/USB3.0 for NULL MAC_addr Profile'
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1660, 1018, 2013
+  Released By:   Karl
+  Release Date:  10/18/2013
+
+  Reason:  
+        1.Support switch USB2.0/USB3.0 balloon Message.
+        2.Fixed display disable NIC state is not synchronized with windows network connection.
+        3.Fixed Profile_page not display when WZC is enable.
+        4.Fixed problem PEAP MSCHAP-v2 profile switch on/off certificate.  
+        Comment: 'balloon Message'
+######################################################################
+  Name:          RtWLan (Win7/Vista/XP)
+  Version:       700, 1672, 1024, 2013
+  Released By:   Karl
+  Release Date:  10/24/2013
+
+  Reason:  
+        1. Fixed blocking non-ASCII SSID String.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista/XP)
+  Version:       700, 1673, 1206, 2013
+  Released By:   Karl
+  Release Date:  12/06/2013
+
+  Reason:  
+        1. Support Reset RTLDHCP by chaek RtlDHCP work API.
+		    2. Modify run RTLDHCP Process.
+
+        Comment: 'RTLDHCP Process'
+######################################################################
+  Name:          RtWLan (Win7/Vista/XP)
+  Version:       700, 1674, 1212, 2013
+  Released By:   Karl
+  Release Date:  12/12/2013
+
+  Reason:  
+        1. Modify the problem can not be successfully quit RtlDHCP.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1675, 1224, 2013
+  Released By:   Karl
+  Release Date:  12/24/2013
+
+  Reason:  
+        1. Modify the problem can not be successfully Run RtlDHCP.
+		   New Method: RTLDHCP.exe -v -ip 192.168.196.1 -range 192.168.196.2-192.168.196.254
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1676, 102, 2014
+  Released By:   Karl
+  Release Date:  1/02/2013
+
+  Reason:  
+        1. Modify RtlDHCP range IP.
+
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1676, 102, 2014
+  Released By:   Karl
+  Release Date:  1/02/2014
+
+  Reason:  
+        1. Modify RtlDHCP range IP.
+		    2. Modify Ics & RtlDHCP speed switching.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista/XP)
+  Version:       700, 1677, 122, 2014
+  Released By:   Karl
+  Release Date:  1/22/2014
+
+  Reason:  
+        1. Set IP has been modified to improve without switching (Station/AP)mode.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1678, 508, 2014
+  Released By:   Vincent
+  Release Date:  5/08/2014
+  Reason:  
+        1. Add "WPA2TKIP_ENABLE" flag in device ini file, it is used for WiFi logo requirement.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1679, 1015, 2014
+  Released By:   Karl
+  Release Date:  10/15/2014
+
+  Reason:  
+        1. Support Internet Finder Control.
+        2. Modify VWifi and SoftAP mode configuration.
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1680, 1021, 2014
+  Released By:   lena_yang
+  Release Date:  10/21/2014
+
+  Reason:  
+        1. Support for WAPI and default close the compile flag
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1681, 1021, 2014
+  Released By:   lena_yang
+  Release Date:  10/21/2014
+
+  Reason:  
+        1. Add RT_Disconnect() to fix link OPEN AP fail when change WAPI to OPEN 
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1682, 1028, 2014
+  Released By:   lena_yang
+  Release Date:  10/28/2014
+
+  Reason:  
+        1. Default Open WAPI Compile flag and support WAPI 
+
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1683, 1125, 2014
+  Released By:   Karl
+  Release Date:  11/25/2014
+
+  Reason:  
+        1. Support Show Channel Load in Channel Quality Page.
+		   Control "ChannelQualityPage_SHOW" flag in device ini file,"1" open ChannelQualityPage.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1684, 1205, 2014
+  Released By:   lena_yang
+  Release Date:  12/05/2014
+
+  Reason:  
+        1. Fix cannot connect to encrypted AP when RtLib close WAPI compile flag.
+	2. Add new thread to start WAPI Cert exe.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1685, 1208, 2014
+  Released By:   Karl
+  Release Date:  12/08/2014
+
+  Reason:  
+        1. Support Show Search Internet Connected BUTTON(Internet Finder) in  Available Network Page.
+		   Control "SearchInternetConnected_ENABLE" flag in device ini file,"1" Show Search Internet Connected BUTTON.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1685, 1211, 2014
+  Released By:   Karl
+  Release Date:  12/11/2014
+
+  Reason:  
+        1. Add progress bar for Search Internet Connected.
+		 
+######################################################################
+ Name:          RtWLan (XP)
+  Version:       700, 1678, 1113, 2014
+  Released By:   lena_yang
+  Release Date:  11/13/2014
+
+  Reason:  
+        1. Support for WAPI and default close the compile flag.
+
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1679, 1203, 2014
+  Released By:   lena_yang
+  Release Date:  12/03/2014
+
+  Reason:  
+        1. Add new thread to start WAPI Cert exe.
+
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1680, 1209, 2014
+  Released By:   lena_yang
+  Release Date:  12/09/2014
+
+  Reason:  
+        1. Open WAPI compile flag default.
+        2. Revise Connect Flag bitmap
+
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1681, 1225, 2014
+  Released By:   Karl
+  Release Date:  12/25/2014
+
+  Reason:  
+        1. Revise ON_WM_CLOSE().
+
+######################################################################
+  Name:          RtWLan (Win7/Vista/XP)
+  Version:       700, 1686, 1229, 2014
+  Released By:   Karl
+  Release Date:  12/29/2014
+
+  Reason:  
+        1.font change to "Tahoma" in ABOUTBOX.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       700, 1687, 108, 2015
+  Released By:   Karl
+  Release Date:  01/08/2015
+
+  Reason:  
+        1.Modify Unplug Process.
+		 
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       700, 1687, 114, 2015
+  Released By:   Karl
+  Release Date:  1/14/2015
+
+  Reason:  
+        1.Modify switch U2/U3 failure handling.
+		 
+######################################################################
+  Name:          RtWLan (XP/Win7/Vista)
+  Version:       V700, 1688, 205, 2015
+  Released By:   Karl
+  Release Date:  02/05/2015
+
+  Reason:  
+        1.Modify ICS & RtlDHCP Process with the new RtlICS API.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       V700, 1689, 319, 2015
+  Released By:   Karl
+  Release Date:  03/19/2015
+
+  Reason:  
+        1.Fix Restart VWiFi port the client can not connect to the Internet.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       V700, 1690, 812, 2015
+  Released By:   Karl
+  Release Date:  08/12/2015
+
+  Reason:  
+        1.Fixed some memory leak problems.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       V700, 1691, 819, 2015
+  Released By:   Karl
+  Release Date:  08/19/2015
+
+  Reason:  
+        1.Previous version mistake commented out some needed code.
+		 
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       V700, 1689, 904, 2015
+  Released By:   Karl
+  Release Date:  09/04/2015
+
+  Reason:  
+        1.Modify switch network adapter.
+	2.Modify update network adapter list.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       V700, 1692, 908, 2015
+  Released By:   Karl
+  Release Date:  09/08/2015
+
+  Reason:  
+        1.Modify switch network adapter.
+	2.Modify update network adapter list.
+		 
+######################################################################
+  Name:          RtWLan (XP)
+  Version:       V700, 1689, 909, 2015
+  Released By:   Karl
+  Release Date:  09/09/2015
+
+  Reason:  
+        1.Fixed sometimes error Show Disable adapter.
+	2.Fixed sometimes DHCP issue after switch to Station mode.
+		 
+######################################################################
+  Name:          RtWLan (Win7/Vista)
+  Version:       V700, 1693, 922, 2015
+  Released By:   Karl
+  Release Date:  09/22/2015
+
+  Reason:  
+        1.Fixed Clear Ethernet IP issues when switching SoftAP mode.
+		 
+######################################################################
+  Name:          RtWLan 
+  Version:       V700, 1694, 1130, 2015
+  Released By:   Karl
+  Release Date:  11/30/2015
+
+  Reason:  
+        1.Modify read config file (ex 8821AU.ini) Process.
+		 
+######################################################################
+

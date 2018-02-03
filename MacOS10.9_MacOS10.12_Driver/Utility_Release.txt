@@ -1,0 +1,38 @@
+v5.0.1 
+	- Support MacOS 10.11.
+	- Fix 802.1x WPA2-TKIP/WPA connect failed. 
+	- Fix 10.18~10.11 SignalStrength incorrect.
+	- Fix 10.10~10.11 icon with white frame.
+
+v5.0.2 
+	- Fix Utility crash issue that ProfileTab is opened and delete profile from dropdown menu.
+	- Fix "Turn Rf Off" disappear after updating scan list in MacOS 10.11.
+	- Fix WEP 1x option in Japanese utility.
+	- Update SignalStrength every 1sec.
+	- Support Certificate from Keychain.
+	- Revise wrong-password judgement. 
+	- Fix USB3.0 sleep-wakeup failed.
+	- PEAP popup CA certificate to check.
+	- Filter damaged certificate.
+	- CA certificate add to Keychain.app
+
+v5.0.3
+	- Revise TrustSetting behavior.
+	- Fix 10.8 hibernate issue.
+	- Remove sortIndicator image from profile.
+	- Support Korean/Russian/Spanish localization.
+ 	- Check utility signature dynamically.
+
+v5.0.4
+	- Revise some API which is deprecated.
+	- Customized for specific ID.
+	- Support French/French-Canada/Swedish.
+	- Support Danish/Italian/Dutch/pt-PT/German/Turkish/Polish.
+	- Revise Signal Strength threshold.
+	- Wrong security setting in open-none profile.
+
+v5.0.5
+	- Fix NIC disappear issue from sleep mode.
+	- Set USB host type to driver.
+	- Fix wrong security setting from 5.0.4.b9
+	- Fix link status if launching utility slower than driver.
