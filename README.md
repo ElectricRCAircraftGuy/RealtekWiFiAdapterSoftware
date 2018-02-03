@@ -1,5 +1,14 @@
 # RealtekWiFiAdapterSoftware
-Software that comes on a tiny little CD with the ["LGTERK 1200Mbps USB 3.0 Wifi Adapter" from Amazon](http://amzn.to/2ECm4ul)
+Software that comes on a tiny little CD with the ["LGTERK 1200Mbps USB 3.0 Wifi Adapter" from Amazon](http://amzn.to/2ECm4ul). The words on the CD state the following:
+```
+802.11AC 
+Drivers&Utilities
+
+Win XP,Vista,Win7,Win8,Win10
+MacOS_Driver
+WIFI_Linux_Driver
+Ver:BU1109
+```
 
 Since not all computers even have CD drives today, it's nice to have a way to download the drivers instead. So, here they are. 
 
