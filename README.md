@@ -12,3 +12,8 @@ Testing:
   * To put into AP mode: right-click the new "REALTEK USB Wireless LAN Utility" icon (a row of increasing-height green vertical bars) in the System Tray and go to "Open Config Utility", then in the GUI that opens up, click "Mode" --> "Access Point." Use the GUI settings to set a password. 
  * Linux: unk
  * Mac OS: unk
+
+Cheers! For more useful computer, electronics, Arduino, Linux, Radio Control and other articles and tips, visit me at www.ElectricRCAircraftGuy.com.
+
+Disclaimer.  
+Even though I bought this device with my own money, unsolicited, and am not being paid to write anything about this product, I am required to post the following disclaimer: "We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites."
