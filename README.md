@@ -22,7 +22,7 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
  * Linux:
    * Ubuntu 14.04 LTS:
      * Tested and works well! See Linux install instructions below.
-     * Speeds (using [`speedtest-cli`](https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-ubuntu/) tool) on my high-end laptop were 100~200 Mbps download and upload, which is about half as fast as the built-in WiFi card on my 1Gbps internet connection.
+     * Speeds (using [`speedtest-cli`](https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-ubuntu/) tool) on my high-end laptop in a USB 3.0 port were 100~200 Mbps download and upload, which is about 1/2 as fast as the built-in WiFi card on my 1Gbps internet connection.
  * Mac OS: unk
 
 ## Installation Instructions:
@@ -34,7 +34,7 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
    * ENSURE THAT NO SPACES EXIST ANYWHERE IN THE ENTIRE PATH NAME, OR ELSE THE FOLLOWING STEPS MAY FAIL. LINUX IS NOTORIOUS FOR REQUIRING THAT COMMAND-LINE COMPILATION AND INSTALLATION TOOLS RUN ONLY IN DIRECTORIES NOT CONTAINING SPACES. Once in the directory which contains the `install.sh` file, run the following commands: 
    * `chmod +x install.sh`
    * `sudo ./install.sh`
-   * Done!
+   * Done! Click the WiFi symbol at the top of the screen in Ubuntu and select the hotspot you'd like to connect to with the new "Realtek USB3.0 802.11ac 1200M Adapter" now showing up in the menu.
 
 Cheers! For more useful computer, electronics, Arduino, Linux, Radio Control and other articles and tips, visit me at www.ElectricRCAircraftGuy.com.
 
