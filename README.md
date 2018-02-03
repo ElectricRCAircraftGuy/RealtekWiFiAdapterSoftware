@@ -1,5 +1,5 @@
 # RealtekWiFiAdapterSoftware
-Software that comes on a tiny little CD with the ["LGTERK 1200Mbps USB 3.0 Wifi Adapter" from Amazon](http://amzn.to/2ECm4ul). The words on the CD state the following:
+Software that comes on a tiny little CD with the ["LGTERK 1200Mbps USB 3.0 Wifi Adapter" from Amazon](http://amzn.to/2ECm4ul). The words printed on the CD label say the following:
 ```
 802.11AC 
 Drivers&Utilities
