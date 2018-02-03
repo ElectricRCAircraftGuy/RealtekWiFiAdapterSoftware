@@ -18,11 +18,13 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
 
  * Windows: works great once you manually install the driver from the CD! Without manually installing the driver it doesn't work at all. 
    * AP (Access Point) mode also works really well for turning this device into a WiFi hot spot! Ex scenario: Use your laptop to connect to the internet via some other way (ex: internal WiFi adapter, Ethernet cable, or tethered phone), then put this external WiFi adapter into AP mode!
-   * To put into AP mode: right-click the new "REALTEK USB Wireless LAN Utility" icon (a row of increasing-height green vertical bars) in the System Tray and go to "Open Config Utility", then in the GUI that opens up, click "Mode" --> "Access Point." WARNING: Use other GUI settings here to set a password or else your access point will be open to the public. 
+   * To put into AP mode: right-click the new "REALTEK USB Wireless LAN Utility" icon (a row of increasing-height green vertical bars) in the System Tray and go to "Open Config Utility", then in the GUI that opens up, click "Mode" --> "Access Point." 
+     * WARNING: Use other GUI settings here to set a password or else your access point will be open to the public. 
  * Linux:
    * Ubuntu 14.04 LTS:
      * Tested and works well! See Linux install instructions below.
      * Speeds (using [`speedtest-cli`](https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-ubuntu/) tool) on my high-end laptop in a USB 3.0 port were 100~200 Mbps download and upload, which is about 1/2 as fast as the built-in WiFi card on my 1Gbps internet connection.
+     * AP mode not tested
  * Mac OS: unk
 
 ## Installation Instructions:
