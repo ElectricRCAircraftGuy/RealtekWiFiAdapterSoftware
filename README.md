@@ -32,10 +32,8 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
    * In folder manager, right-click `RealtekWiFiAdapterSoftware-master.zip` and go to "Extract Here"
    * Once extracted, open up a terminal and `cd` into `RealtekWiFiAdapterSoftware-master/RTL88x2BU_WiFi_linux_v5.1.7_19806`
    * ENSURE THAT NO SPACES EXIST ANYWHERE IN THE ENTIRE PATH NAME, OR ELSE THE FOLLOWING STEPS MAY FAIL. LINUX IS NOTORIOUS FOR REQUIRING THAT COMMAND-LINE COMPILATION AND INSTALLATION TOOLS RUN ONLY IN DIRECTORIES NOT CONTAINING SPACES. Once in the directory which contains the `install.sh` file, run the following commands: 
- ```
-chmod +x install.sh
-sudo ./install.sh
- ```
+   * `chmod +x install.sh`
+   * `sudo ./install.sh`
    * Done!
 
 Cheers! For more useful computer, electronics, Arduino, Linux, Radio Control and other articles and tips, visit me at www.ElectricRCAircraftGuy.com.
