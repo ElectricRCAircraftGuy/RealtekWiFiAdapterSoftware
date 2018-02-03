@@ -36,7 +36,7 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
 chmod +x install.sh
 sudo ./install.sh
  ```
-    * Done!
+   * Done!
 
 Cheers! For more useful computer, electronics, Arduino, Linux, Radio Control and other articles and tips, visit me at www.ElectricRCAircraftGuy.com.
 
