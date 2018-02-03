@@ -14,13 +14,29 @@ Since not all computers even have CD drives today, it's nice to have a way to do
 
 Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
 
-Testing:
+## Testing:
 
  * Windows: works great once you manually install the driver from the CD! Without manually installing the driver it doesn't work at all. 
    * AP (Access Point) mode also works really well for turning this device into a WiFi hot spot! Ex scenario: Use your laptop to connect to the internet via some other way (ex: internal WiFi adapter, Ethernet cable, or tethered phone), then put this external WiFi adapter into AP mode!
    * To put into AP mode: right-click the new "REALTEK USB Wireless LAN Utility" icon (a row of increasing-height green vertical bars) in the System Tray and go to "Open Config Utility", then in the GUI that opens up, click "Mode" --> "Access Point." WARNING: Use other GUI settings here to set a password or else your access point will be open to the public. 
- * Linux: unk
+ * Linux:
+   * Ubuntu 14.04 LTS:
+     * Tested and works well! See Linux install instructions below.
+     * Speeds (using [`speedtest-cli`](https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-ubuntu/) tool) on my high-end laptop were 100~200 Mbps download and upload, which is about half as fast as the built-in WiFi card on my 1Gbps internet connection.
  * Mac OS: unk
+
+## Installation Instructions:
+
+ * Windows: double-click the `Windows_driver/Setup.exe` file. 
+ * Linux Ubuntu: 
+   * In folder manager, right-click `RealtekWiFiAdapterSoftware-master.zip` and go to "Extract Here"
+   * Once extracted, open up a terminal and `cd` into `RealtekWiFiAdapterSoftware-master/RTL88x2BU_WiFi_linux_v5.1.7_19806`
+   * ENSURE THAT NO SPACES EXIST ANYWHERE IN THE ENTIRE PATH NAME, OR ELSE THE FOLLOWING STEPS MAY FAIL. LINUX IS NOTORIOUS FOR REQUIRING THAT COMMAND-LINE COMPILATION AND INSTALLATION TOOLS RUN ONLY IN DIRECTORIES NOT CONTAINING SPACES. Once in the directory which contains the `install.sh` file, run the following commands: 
+ ```
+chmod +x install.sh
+sudo ./install.sh
+ ```
+    * Done!
 
 Cheers! For more useful computer, electronics, Arduino, Linux, Radio Control and other articles and tips, visit me at www.ElectricRCAircraftGuy.com.
 
