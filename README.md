@@ -11,8 +11,8 @@ Ready to use. Here are the files.
 <!-- MarkdownTOC -->
 
 1. [RealtekWiFiAdapterSoftware](#realtekwifiadaptersoftware)
-  1. [Testing:](#testing)
-  1. [Installation Instructions:](#installation-instructions)
+    1. [Testing:](#testing)
+    1. [Installation Instructions:](#installation-instructions)
 
 <!-- /MarkdownTOC -->
 </details>
