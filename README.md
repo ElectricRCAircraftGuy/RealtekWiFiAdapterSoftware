@@ -1,3 +1,24 @@
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FElectricRCAircraftGuy%2FRealtekWiFiAdapterSoftware&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views+%28today+%2F+total%29&edge_flat=false)](https://hits.seeyoufarm.com)
+
+# Repo Status
+
+Ready to use. Here are the files. 
+
+
+# Table of Contents
+<details>
+<summary><b>(click to expand or hide)</b></summary>
+<!-- MarkdownTOC -->
+
+1. [RealtekWiFiAdapterSoftware](#realtekwifiadaptersoftware)
+  1. [Testing:](#testing)
+  1. [Installation Instructions:](#installation-instructions)
+
+<!-- /MarkdownTOC -->
+</details>
+
+
+<a id="realtekwifiadaptersoftware"></a>
 # RealtekWiFiAdapterSoftware
 Software that comes on a tiny little CD with the ["LGTERK 1200Mbps USB 3.0 Wifi Adapter" from Amazon](http://amzn.to/2ECm4ul). The words printed on the CD label say the following:
 ```
@@ -14,6 +35,7 @@ Since not all computers even have CD drives today, it's nice to have a way to do
 
 Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
 
+<a id="testing"></a>
 ## Testing:
 
  * Windows: works great once you manually install the driver from the CD! Without manually installing the driver it doesn't work at all. 
@@ -27,6 +49,7 @@ Chipset: Realtek 8812BU Wireless LAN 802.11ac USB NIC
      * AP mode not tested
  * Mac OS: unk
 
+<a id="installation-instructions"></a>
 ## Installation Instructions:
 
  * Windows: double-click the `Windows_driver/Setup.exe` file. 
